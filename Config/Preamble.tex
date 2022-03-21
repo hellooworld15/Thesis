@@ -1,0 +1,343 @@
+%!TeX spellcheck = en_GB 
+% ******************************************************************************
+% ****************************** Custom Margin *********************************
+
+% Add `custommargin' in the document class options to use this section
+% Set {innerside margin (use left or inner) / outerside margin (right or outer) / 
+% topmargin / bottom margin} and other page dimensions
+% Minimum specified in requirements:
+\ifsetCustomMargin
+  \RequirePackage[inner=35mm,outer=25mm,top=25mm,bottom=25mm,includehead,includefoot]{geometry}
+%  \setFancyHdr % To apply fancy header after geometry package is loaded
+\fi
+
+% Example with original template
+%\ifsetCustomMargin
+%  \RequirePackage[left=37mm,right=30mm,top=35mm,bottom=30mm]{geometry}
+%  \setFancyHdr % To apply fancy header after geometry package is loaded
+%\fi
+
+% Add spaces between paragraphs
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{\baselineskip}
+
+% Ragged bottom avoids extra whitespaces between paragraphs
+\raggedbottom
+
+% To remove the excess top spacing for enumeration, list and description
+%\usepackage{enumitem}
+%\setlist[enumerate,itemize,description]{topsep=0em}
+
+% Edit spacing around titles
+\RequirePackage{titlesec}
+\titleformat{\chapter}[display]   
+{\normalfont\huge\bfseries}{\chaptertitlename\ \thechapter}{20pt}{\Huge}   
+\titlespacing*{\chapter}{0pt}{-40pt}{40pt}
+\allowdisplaybreaks
+\makeatletter\@openrightfalse
+
+% Edit spacing around figures
+\setlength{\abovedisplayskip}{4pt}
+\setlength{\belowdisplayskip}{4pt}
+
+% *****************************************************************************
+% ******************* Fonts (like different typewriter fonts etc.)*************
+
+% Add `customfont' in the document class option to use this section
+
+\ifsetCustomFont
+  % Set your custom font here and use `customfont' in options. Leave empty to
+  % load computer modern font (default LaTeX font).
+  %\RequirePackage{helvet}
+
+  % For use with XeLaTeX
+  %  \setmainfont[
+  %    Path              = ./libertine/opentype/,
+  %    Extension         = .otf,
+  %    UprightFont = LinLibertine_R,
+  %    BoldFont = LinLibertine_RZ, % Linux Libertine O Regular Semibold
+  %    ItalicFont = LinLibertine_RI,
+  %    BoldItalicFont = LinLibertine_RZI, % Linux Libertine O Regular Semibold Italic
+  %  ]
+  %  {libertine}
+  %  % load font from system font
+  %  \newfontfamily\libertinesystemfont{Linux Libertine O}
+\fi
+
+% ******************************************************************************
+% **************************** Custom Packages *********************************
+
+% *************************** Maths and Physics ********************************
+
+\usepackage{mathtools}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{gensymb}
+%\usepackage{physics}
+
+% ************************* Algorithms and Pseudocode **************************
+
+\usepackage{algorithm2e}
+%\usepackage{algpseudocode}
+
+% ********************Captions and Hyperreferencing / URL **********************
+
+% Captions: This makes captions of figures use a boldfaced small font.
+%\RequirePackage[small,bf]{caption}
+
+\RequirePackage[labelsep=space,tableposition=top]{caption}
+\renewcommand{\figurename}{Fig.} %to support older versions of captions.sty
+
+\usepackage[nameinlink]{cleveref}
+\crefname{app}{Appendix}{Appendices}
+
+% \usepackage[hyphens]{url}
+\usepackage{xurl}
+\usepackage{hyperref}
+\urlstyle{tt}
+
+\usepackage[acronym,nonumberlist,toc]{glossaries}
+% \usepackage[acronym]{glossaries}
+% \makeglossaries
+\makenoidxglossaries
+
+% *************************** Graphics and figures *****************************
+
+%\usepackage{rotating}
+%\usepackage{wrapfig}
+
+% Uncomment the following two lines to force Latex to place the figure.
+% Use [H] when including graphics. Note 'H' instead of 'h'
+\usepackage{float}
+\restylefloat{figure}
+
+% Subcaption package is also available in the sty folder you can use that by
+% uncommenting the following line
+% This is for people stuck with older versions of texlive
+%\usepackage{sty/caption/subcaption}
+\usepackage{subcaption}
+
+% Support pdf as graphics
+\usepackage{graphicx}
+
+\usepackage{tikz}
+\usetikzlibrary{shapes,arrows}
+\usepackage{geometry}
+\usepackage[templates]{genealogytree}
+\usepackage{lmodern}
+
+\usepackage{pdfpages}
+
+% ********************************** Tables ************************************
+\usepackage{booktabs} % For professional looking tables
+\usepackage{multirow}
+
+%\usepackage{multicol}
+\usepackage{longtable}
+%\usepackage{tabularx}
+
+
+% *********************************** SI Units *********************************
+\usepackage{siunitx} % use this package module for SI units
+
+
+% ******************************* Line Spacing *********************************
+
+% Choose linespacing as appropriate. Default is one-half line spacing as per the
+% University guidelines
+
+% \doublespacing
+\onehalfspacing
+% \singlespacing
+
+
+% ************************ Formatting / Footnote *******************************
+
+% Don't break enumeration (etc.) across pages in an ugly manner (default 10000)
+%\clubpenalty=500
+%\widowpenalty=500
+
+%\usepackage[perpage]{footmisc} % Range of footnote options
+%\usepackage[perpage]{footmisc} % Range of footnote options
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{enumitem}
+\SetLabelAlign{myright}{\hss\llap{$#1$}}
+\newlist{where}{description}{1}
+\setlist[where]{labelwidth=2cm,labelsep=1em,
+	leftmargin=!,align=myright,font=\normalfont}
+
+\newcommand{\SubItem}[1]{
+    {\setlength\itemindent{15pt} \item[-] #1}
+}
+
+
+% *****************************************************************************
+% *************************** Bibliography  and References ********************
+
+%\usepackage{cleveref} %Referencing without need to explicitly state fig /table
+
+% Add `custombib' in the document class option to use this section
+\ifuseCustomBib
+   \usepackage[numbers]{natbib} % CustomBib
+
+% If you would like to use biblatex for your reference management, as opposed to the default `natbibpackage` pass the option `custombib` in the document class. Comment out the previous line to make sure you don't load the natbib package. Uncomment the following lines and specify the location of references.bib file
+
+%\RequirePackage[backend=biber, style=numeric-comp, citestyle=numeric, sorting=nty, natbib=true]{biblatex}
+%\addbibresource{References/references} %Location of references.bib only for biblatex, Do not omit the .bib extension from the filename.
+
+\fi
+
+% changes the default name `Bibliography` -> `References'
+\renewcommand{\bibname}{References}
+
+
+% ******************************************************************************
+% ************************* User Defined Commands ******************************
+
+% *********** To change the name of Table of Contents / LOF and LOT ************
+
+%\renewcommand{\contentsname}{My Table of Contents}
+%\renewcommand{\listfigurename}{My List of Figures}
+%\renewcommand{\listtablename}{My List of Tables}
+
+
+% ********************** TOC depth and numbering depth *************************
+
+% Victor changed to 3
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+
+% ******************************* Nomenclature *********************************
+
+% To change the name of the Nomenclature section, uncomment the following line
+
+%\renewcommand{\nomname}{Symbols}
+
+
+% ********************************* Appendix ***********************************
+
+% The default value of both \appendixtocname and \appendixpagename is 
+% `Appendices'. These names can all be changed via:
+
+%\renewcommand{\appendixtocname}{List of appendices}
+%\renewcommand{\appendixname}{Appndx}
+\usepackage[titletoc]{appendix}
+
+% *********************** Configure Draft Mode **********************************
+
+% Uncomment to disable figures in `draft'
+%\setkeys{Gin}{draft=true}  % set draft to false to enable figures in `draft'
+
+% These options are active only during the draft mode
+% Default text is "Draft"
+\SetDraftText{Thesis Draft v0.1}
+
+% Default Watermark location is top. Location (top/bottom)
+%\SetDraftWMPosition{bottom}
+
+% Draft Version - default is v1.0
+\SetDraftVersion{GENERAL}
+
+% Draft Text grayscale value (should be between 0-black and 1-white)
+% Default value is 0.75
+%\SetDraftGrayScale{0.8}
+
+
+% ******************************** Todo Notes **********************************
+% Uncomment the following lines to have todonotes.
+% You can have multiple notes (uncomment \othernote line), e.g. to write notes 
+% directed at your supervisor.
+
+\makeatletter
+\ifsetDraft
+	\usepackage[colorinlistoftodos]{todonotes}
+	\newcommand{\oftodo}[1]{\todo[size=\small,author=@OF,inline,color=orange!40]{#1}}
+	\newcommand{\swtodo}[1]{\todo[size=\small,inline,author=@SW,color=red!40]{#1}}
+	\newcommand{\actodo}[1]{\todo[size=\small,inline,author=@Accn,color=magenta!40]{#1}}
+\else
+	\newcommand{\oftodo}[1]{}
+	\newcommand{\swtodo}[1]{}
+	\newcommand{\actodo}[1]{}
+	\newcommand{\listoftodos}{}
+	\providecommand{\@LN}[2]{}
+\fi
+\makeatother
+
+% Example todo: \mynote{Hey! I have a note}
+
+% *************************** Other custom commands ****************************
+
+% At numbers in a long align* block
+\newcommand{\numberthis}{\addtocounter{equation}{1}\tag{\theequation}}
+
+% Custom maths symbols (examples)
+%\newcommand{\Rwb}{\prescript{W}{}{R}_B}
+%\newcommand{\dRwb}{\prescript{W}{}{\dot{R}}_B}
+%\newcommand{\skewm}[3]{\bmqty{  0 & -#3 &  #2 \\
+%							   #3 &   0 & -#1 \\
+%						      -#2 &  #1 &   0 }}
+%\DeclareMathOperator*{\argmin}{arg\,min}
+
+% Victor changes
+\usepackage{dirtytalk}
+\newtheorem{definition}{Definition}
+
+
+% Python highlighting https://tex.stackexchange.com/questions/83882/how-to-highlight-python-syntax-in-latex-listings-lstinputlistings-command
+
+% Default fixed font does not support bold face
+\DeclareFixedFont{\ttb}{T1}{txtt}{bx}{n}{10} % for bold
+\DeclareFixedFont{\ttm}{T1}{txtt}{m}{n}{10}  % for normal
+
+% Custom colors
+\usepackage{color}
+\definecolor{deepblue}{rgb}{0,0,0.5}
+\definecolor{deepred}{rgb}{0.6,0,0}
+\definecolor{deepgreen}{rgb}{0,0.5,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+
+\usepackage{listings}
+
+% Python style for highlighting
+\newcommand\pythonstyle{\lstset{
+language=Python,
+basicstyle=\ttm,
+morekeywords={self},              % Add keywords here
+keywordstyle=\ttb\color{deepblue},
+numberstyle=\tiny\color{codegray},
+numbers=left,
+emph={MyClass,__init__},          % Custom highlighting
+emphstyle=\ttb\color{deepred},    % Custom highlighting style
+stringstyle=\color{deepgreen},
+frame=tb,                         % Any extra options here
+showstringspaces=false,
+breaklines=true,
+postbreak=\mbox{\textcolor{red}{$\hookrightarrow$}\space},
+commentstyle=\color{gray}\ttfamily
+}}
+
+
+% Python environment
+\lstnewenvironment{python}[1][]
+{
+\pythonstyle
+\lstset{#1}
+}
+{}
+
+% Python for external files
+\newcommand\pythonexternal[2][]{{
+\pythonstyle
+\lstinputlisting[#1]{#2}}}
+
+% Python for inline
+\newcommand\pythoninline[1]{{\pythonstyle\lstinline!#1!}}
+
+% For centering large tables
+\usepackage{adjustbox}
+
+% Inline code snippet
+\newcommand{\code}[1]{\texttt{#1}}
