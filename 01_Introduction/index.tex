@@ -1,15 +1,65 @@
 \graphicspath{{./Figs/}}
 
 \chapter{Introduction} 
-\label{sec:intro}
+% \label{sec:Background}
 
-\begin{python}[caption=Example computation]
-// Calculate the multiplication of x and y by adding x, y number of times.
-function multiply(x, y):
-  output = 0
 
-  for i = 0..y:
-    output = output + x
+Unmanned aerial vechicles (UAV) are used throughout various industries to conduct missions which are either dangerous, difficult or tedious for humans to perform. The development of technologies and demand for smaller aerial vechicles has lead to the development of Micro aerial vehicles (MAV). MAV's will become evermore important for both commerical and millitary use as advancements are made in navigation systems, cooperative control of multiple MAV's, advanced vision systems, embedded computational systems and navigational systems. 
 
-  return output
-\end{python}
+\label{subsec:Proliferation of MAV's in the Aerospace Landscape}
+
+UAV's have existed for centuries and have been predominately used for survellience and millitary purposes. The recent shift to the miniturization of components, systems and aerial vehicles has already influenced the military sector with several developments underway to reduce visibility of reconansance aircraft and reduce the likelihood of aircraft being detected during missions.(todo: add examples) What started as a small initial interest in smaller and smarter drones has resulted in exponential growth in the sector. This coupled together with the growth in camera sensors and computer development, has led to the exponential growth in the capabilities of MAV seen today. Where an inital drone supported only low camera resolution with meagre flight times, today incoporates several systems such as gyrostabilisation, GPS capability with waypoint guidance, beyond the line of vision control, speeds of 70 km/h with a 30 minute flight time and a 20 megapixel camera. (DJI Phantom 4). \\
+
+\label{subsec: Limitations of Current Developed MAV}
+While MAV technology is more accessible and viable to mass market than it has ever been before, there is no fully developed and validated way to optimize a MAV for a specified mission. Procedures today involve developing a CAD model of the MAV which is either then run through aerodynamic optimization software and/or tested in a wind tunnel to detemine the main characteristics of the MAV. The largest drawback of which is the lack of propeller effects accounted for during wind tunnel testing. Models are typically tested without a free-flowing propeller, although these have been included in several aerodynamic software programs. A lack of validation from wind tunnel testing however, means that a full understanding of the effects a propeller has on MAV's has not been conducted. Due to the small size of MAV and the large relative size of the propeller rotor disc compared to both the wing and body size it is expected that the propeller will significantly affect the stability, noise, overall endurance, performance and power consumption of a given MAV. 
+
+
+\label{subsec:The General Micro Aerial Vechicle}
+Today the interest, research and development of MAV's is continually increasing, however in order to focus on particular aspects or compare various designs, a "baseline" geometry is required. An example of this is the GENMAV (Air Force Reasearch Laboratory Munitions Directorate). While there are various baseline models (todo: examples), none have completed a physical wind tunnel test while accounting for the effects of a powered propeller. Inital GENMAV aerodynamic data was determined by using the vortex-panel method (todo: brief description) and did not involve wind tunnel testing. The effects of propeller induced flow has also been studied for both fixed and free-spinning propellers but currently no data is avaliable for wind tunnel tests of a powered MAV.
+
+\label{subsec:Optimization Techniques and Validation}
+
+
+\label{sec:Problem Statement}
+
+% paragraph on impact\significance of MAV
+
+% paragraph on current Limitations
+
+%paragraph on lack of propeller effects
+
+% paragraph on challenge/ main goal 
+
+\label{sec:Objectives}
+The objectives of this thesis are as follows:
+
+\begin{enumerate}
+  \item To carry out a review of current published literature and determine areas with insufficient or no research avaliable for further development and research.
+  \item To design and produce a 3D model of a generic micro aerial vechicle with interchangable empennage.
+  \item To conduct wind tunnel testing of the generic micro aerial vechicle model with and without propeller effects.
+  \item To analyse data of wind tunnel results and detail the affect that propeller effects have on general micro aerical vehicles.
+\end{enumerate}
+
+\label{sec:Outline}
+An outline of the proposed final submission is listed below, however is subject to change.
+
+\begin{itemize}
+  \item Chapter 2: Background and literaure review of relevant topics and reasearch for this thesis
+  \item Chapter 3: Proposed setup of analysis
+  \item Chapter 4: Implementation
+  \item Chapter 5: Results
+  \item Chater 6: Discussion
+  \item Chapter 7: Conclusion
+\end{itemize}
+
+
+% \begin{python}[caption=Example computation]
+% // Calculate the multiplication of x and y by adding x, y number of times.
+% function multiply(x, y):
+%   output = 0
+
+%   for i = 0..y:
+%     output = output + x
+
+%   return output
+% \end{python}
