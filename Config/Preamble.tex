@@ -1,7 +1,7 @@
 %!TeX spellcheck = en_GB 
 % ******************************************************************************
 % ****************************** Custom Margin *********************************
-
+% \usepackage{todonotes}
 % Add `custommargin' in the document class options to use this section
 % Set {innerside margin (use left or inner) / outerside margin (right or outer) / 
 % topmargin / bottom margin} and other page dimensions
@@ -261,7 +261,7 @@
 	\newcommand{\oftodo}[1]{}
 	\newcommand{\swtodo}[1]{}
 	\newcommand{\actodo}[1]{}
-	\newcommand{\listoftodos}{}
+	% \newcommand{\listoftodos}{}
 	\providecommand{\@LN}[2]{}
 \fi
 \makeatother
@@ -299,6 +299,7 @@
 \definecolor{deepgreen}{rgb}{0,0.5,0}
 \definecolor{codegray}{rgb}{0.5,0.5,0.5}
 
+% \usepackage{todonotes}
 \usepackage{listings}
 
 % Python style for highlighting
@@ -341,3 +342,5 @@ commentstyle=\color{gray}\ttfamily
 
 % Inline code snippet
 \newcommand{\code}[1]{\texttt{#1}}
+% \newcommand\myworries[1]{\textcolor{red}{#1}}
+\usepackage{todonotes}

@@ -3,29 +3,44 @@
 \chapter{Introduction} 
 % \label{sec:Background}
 
+% What is a MAV
 
-Unmanned aerial vechicles (UAV) are used throughout various industries to conduct missions which are either dangerous, difficult or tedious for humans to perform. The development of technologies and demand for smaller aerial vechicles has lead to the development of Micro aerial vehicles (MAV). MAV's will become evermore important for both commerical and millitary use as advancements are made in navigation systems, cooperative control of multiple MAV's, advanced vision systems, embedded computational systems and navigational systems. 
+Unmanned aerial vechicles (UAV) are used throughout various industries to conduct missions which are either dangerous, difficult or tedious for humans to perform. The development of technologies and demand for smaller aerial vechicles has lead to the development of Micro aerial vehicles (MAV). MAV's will become evermore important for both commerical and millitary use as advancements are made in navigation systems, cooperative control of multiple MAV's, advanced vision systems, embedded computational systems and navigational systems \todo{cite paper}.\\
+\\
+With the increased complexity of MAV designs, there has also been increased interest in the reasearch and design of optimized MAV models. Current methods \todo{cite} do not produce validated,optimised and reliable designs which maximise the performance for the relevant purpose it is created for. In this area software designed to numerically optimise models based on aerodynamic properties which are mathematically determined are being used. This has left large unaccounted for aspects of flight such as the low Reynolds number that MAVs fly at and the influence of propeller effects on the rest of the MAV.\\
+\\
+Many groups of research have \todo{cite} created software to optimize MAV's by using optimization algorthims such as generic algorthims, non-dominating sorting generic algorithms, particle swarm optimization and sequential quadratic optimisation programs. While some have accounted for low Reynolds numbers and even fewer, propeller interaction effects. None have validated these results with physical testing. These effects are expected to greatly influence the aerodynamics of MAV designs and both aspects of flight are currently unaccounted for together in physical wind tunnel testing.
 
-\label{subsec:Proliferation of MAV's in the Aerospace Landscape}
+\section{Background}
+% Intro here
 
-UAV's have existed for centuries and have been predominately used for survellience and millitary purposes. The recent shift to the miniturization of components, systems and aerial vehicles has already influenced the military sector with several developments underway to reduce visibility of reconansance aircraft and reduce the likelihood of aircraft being detected during missions.(todo: add examples) What started as a small initial interest in smaller and smarter drones has resulted in exponential growth in the sector. This coupled together with the growth in camera sensors and computer development, has led to the exponential growth in the capabilities of MAV seen today. Where an inital drone supported only low camera resolution with meagre flight times, today incoporates several systems such as gyrostabilisation, GPS capability with waypoint guidance, beyond the line of vision control, speeds of 70 km/h with a 30 minute flight time and a 20 megapixel camera. (DJI Phantom 4). \\
+\subsection{Proliferation of MAV's in the Aerospace Landscape}
+\label{subsec:ProliferationMAVs}
 
-\label{subsec: Limitations of Current Developed MAV}
+UAV's have existed for centuries and have been predominately used for survellience and millitary purposes \todo{cite paper}. The recent shift to the miniturization of components, systems and aerial vehicles has already influenced the military sector with several developments underway to reduce visibility of reconansance aircraft and reduce the likelihood of aircraft being detected during missions.\todo{: add examples)} What started as a small initial interest in smaller and smarter drones has resulted in exponential growth in the sector \todo{cite}. This coupled together with the growth in camera sensors and computer development, has led to the exponential growth in the capabilities of MAV seen today. Where an inital drone supported only low camera resolution with meagre flight times, today incoporates several systems such as gyrostabilisation, GPS capability with waypoint guidance, beyond the line of vision control, speeds of 70 km/h with a 30 minute flight time and a 20 megapixel camera. (DJI Phantom 4)\todo{cite Phantom}. \\
+
+% Look at section \ref{sec:ProliferationMAVs}.
+
+\subsection{Limitations of Current Developed MAV}
+\label{subsec:Limitations}
 While MAV technology is more accessible and viable to mass market than it has ever been before, there is no fully developed and validated way to optimize a MAV for a specified mission. Procedures today involve developing a CAD model of the MAV which is either then run through aerodynamic optimization software and/or tested in a wind tunnel to detemine the main characteristics of the MAV. The largest drawback of which is the lack of propeller effects accounted for during wind tunnel testing. Models are typically tested without a free-flowing propeller, although these have been included in several aerodynamic software programs. A lack of validation from wind tunnel testing however, means that a full understanding of the effects a propeller has on MAV's has not been conducted. Due to the small size of MAV and the large relative size of the propeller rotor disc compared to both the wing and body size it is expected that the propeller will significantly affect the stability, noise, overall endurance, performance and power consumption of a given MAV. 
 
+\subsection{The General Micro Aerial Vechicle}
+\label{subsec:GenMAV}
+Today the interest, research and development of MAV's is continually increasing, however in order to focus on particular aspects or compare various designs, a "baseline" geometry is required. An example of this is the GENMAV (Air Force Reasearch Laboratory Munitions Directorate). While there are various baseline models (todo: examples), none have completed a physical wind tunnel test while accounting for the effects of a powered propeller. Inital GENMAV aerodynamic data was determined by using the vortex-panel method (todo: brief description) and did not involve wind tunnel testing. The effects of propeller induced flow has also been studied for both fixed and free-spinning propellers but currently no data is avaliable for wind tunnel tests of a powered MAV.
 
-\label{subsec:The General Micro Aerial Vechicle}
-Today the interest, research and development of MAV's is continually increasing, however in order to focus on particular aspects or compare various designs, a "baseline" geometry is required. An example of this is the GENMAV (Air Force Reasearch Laboratory Munitions Directorate). While there are various baseline models (todo: examples), none have completed a physical wind tunnel test while accounting for the effects of a powered propeller. The significance
+\subsection{Optimization Techniques and Validation}
+\label{subsec:Optimization}
+Many non-standard aircraft designs are evaluated using software in order to analyse aerodynamic characteristics and then optimized through a variety of typical software engineering methods such as the particle swarm method. These procedures are typically used as non-standard aircraft designs are more tedious to design and even more complex to setup and test than compared with standard aircraft designs. 
 
-\label{subsec:Optimization Techniques and Validation}
-Inital GENMAV aerodynamic data was determined by using the vortex-panel method (todo: brief description) and did not involve wind tunnel testing. The effects of propeller induced flow has also been studied for both fixed and free-spinning propellers but currently no data is avaliable for wind tunnel tests of a MAV with a powered propeller(todo: ref paper). 
-% The increased interest in small air vehicle research has
-% resulted in several new research initiatives aimed at
-% improving the performance of these vehicles in the low
-% Reynolds number regime (Amprikidis and Cooper,
-% 2003; Gad-el-Hak, 2001; Lind et al., 2004; Shkarayev
-% et al., 2004).
-\label{sec:Problem Statement}
+
+\section{Problem Statement}
+\label{ProblemStatement}
+MAV's are set to increase the ability to conduct a variety of missions which predominately have military or survellience objectives (todo: examples ). In the past troopers would venture on dangerous missions in order to "hopefully" gather useful information while risking their lives (todo: cite paper). Survellience was conducted initally from hot air balloons, again risking human lives. Later aircraft (mainly helicopters) would be used, costing companies large sums of money in order to survey from a birds eye view. Today drones and UAV's often conduct this work. The next major technology jump sees the optimization and miniturization of these aircraft to produce MAV's. \\
+\\
+MAV's fit a niche and growing market. These aircraft are mainly used for military purposes due to the MAV's main deffering attributes; its smaller size, lower radar visibility and lower noise output.\\
+\\
+Although companies and research teams develop and produce a variety of MAV's there is currently no way to optimize a MAV model with full confidence in the results produced. This is due to a lack of physical testing and a reliance on software 
 
 % paragraph on impact\significance of MAV
 MAV's
@@ -34,8 +49,9 @@ MAV's
 
 %paragraph on lack of propeller effects
 
-% paragraph on challenge/ main goal 
 
+% paragraph on challenge/ main goal 
+\section{Objectives}
 \label{sec:Objectives}
 The objectives of this thesis are as follows:
 
@@ -46,6 +62,7 @@ The objectives of this thesis are as follows:
   \item To analyse data of wind tunnel results and detail the affect that propeller effects have on general micro aerical vehicles.
 \end{enumerate}
 
+\section{Outline}
 \label{sec:Outline}
 An outline of the proposed final submission is listed below, however is subject to change.
 
@@ -57,6 +74,7 @@ An outline of the proposed final submission is listed below, however is subject 
   \item Chater 6: Discussion
   \item Chapter 7: Conclusion
 \end{itemize}
+
 
 
 % \begin{python}[caption=Example computation]
