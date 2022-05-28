@@ -6,7 +6,7 @@
 % What is a MAV
 
 
-Unmanned aerial vechicles (UAV) are used throughout various industries to conduct missions which are either dangerous, difficult or tedious for humans to perform. The development of technologies and demand for smaller aerial vechicles has lead to the development of Micro aerial vehicles (MAV) \cite{NONAMI2007}. MAV's will become evermore important for both commerical \cite{Liu2014} and millitary \cite{Chaturvedi2019} \cite{Fan2018} use as advancements are made in navigation systems, cooperative control of multiple MAV's, advanced vision systems, embedded computational systems and navigational systems.\\
+Unmanned aerial vechicles (UAV) are used throughout various industries to conduct missions which are either dangerous, difficult or tedious for humans to perform. The development of technologies and demand for smaller aerial vechicles has lead to the development of Micro aerial vehicles (MAV) \cite{NONAMI2007}. MAV's will become evermore important for both commerical \cite{Liu2014} and millitary \cite{Chaturvedi2019} \cite{Fan2018} use as advancements are made in navigation systems, cooperative control of multiple MAV's, advanced vision systems, embedded computational systems and navigational systems.
 
 %  MAV's do not have a standard guidelines for 
 Despite the small size of MAV's there are three main categories these aircraft fit into. These are fixed wings \cite{Stanford2008} \cite{Lasek2001}, rotary wings, flapping wings\cite{Platzer2012} or a combination of these. Due to the small size and Reynolds numbers at which these aircraft operate at (typically around Re=$10^5$\cite{Huq2009}), insects and other small animals are often studied to understand the flight dynamics which occur for small flying bodies \cite{Liu2009}. The additional complexity to the design of MAV's occurs due to several factors:
@@ -17,6 +17,13 @@ Despite the small size of MAV's there are three main categories these aircraft f
   \item Reduced stall speed
   \item Low inertia
 \end{itemize}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{images/Reynolds.png}
+  \caption{Fine mesh}
+  \label{fig:MAVsizes}
+\end{figure}
 
 % \\
 With the increased complexity of MAV designs, there has also been increased interest in the reasearch and design of optimized MAV models \cite{Ward2017}. Current methods \todo{cite} do not produce validated, optimised and reliable designs which maximise the performance for the relevant purpose it is created for. In this area software designed to numerically optimise models based on aerodynamic properties, which are in turn mathematically determined are being used. The low Reynolds number that MAVs fly at and the influence of propeller effects on the rest of the MAV are currently unvalidated with physical wind tunnel testing. This main goal of this thesis therefore aims to fill in this gap.\\
