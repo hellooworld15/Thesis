@@ -1,10 +1,15 @@
 \graphicspath{{./Figs/}}
 
 \chapter{Background} 
-This section outlines the core theory and topics which are relevant for the optimization of MAV's and the effect of propeller interactions on the main wings of small MAV. 
+This section outlines the core theory and topics which are relevant for the optimization of MAV's and the effect of propeller interactions on the main wings of small MAV. MAV design is more complex than general aircraft design due to factors such as the non-linear lift distribution, low aspect ratio wings, low Reynolds number flows, structural integrity due to the small size and 
 
 
+\section{Aerodynamic Parameters}
+\label{sec:AerodynamicParameters}
+The characteristics of an aircraft is given by a combination of the aerodynamic parameters that describe it. For MAV's this is more complex as these aircraft do not allow for the same assumptions to be made in calculations. New methods for determining the aerodyanmic parameters are currently being developed and proposed \cite{Shen2018} \cite{Roberts2011} in order to address these differences. Aerodynamic forces are cruical to the overall design of any aircraft \cite{Aero2012}. In order to determine these forces for MAV's a variety of techniques have been used such are the simple vortex lattice method \cite{Stewart2007} \cite{Hard2010}. However this method lacks the ability to predict the separetion of flow as lift is assumed to increase linearly with respect to the angle of attack \cite{Aboelezz2020}. This is not the case at low Reynolds numbers \cite{Zhang2022}. 
 
+\cite{DeLuca2004}.
+\cite{Chinwicharnam2013}
 
 \section{Low Reynolds Number Effects }
 \label{sec:LowReynolds}
@@ -17,12 +22,23 @@ Low Reynolds number compressible aerodynamics affect many different varities of 
 
 \section{MAV Optimization}
 \label{sec:MAV Optimization}
+Many optimization techniques exist which aim to optimize the aerodynamic design of MAV's. Algorithms such as genetic algorithms, artificial neural networks \cite{Boutemedjet2019}, 
 \subsection{Wing Planform}
 
 \subsection{Tail Planform}
 
 \section{Non-Linear Lift Distribution}
 \label{sec:Non-Linear Lift Distribution}
+Early on in the study of aerodynamics, theories which were developed from the study of conventional aircraft were applied to the bodies of small flying objects and animals such as birds. Traditional aerodynamic theories provide good results and insights when steady flows move across a staionary body. They could not however explain what allows small insects and birds to fly leading to the paradox of "a bee cannot fly" \cite{bees} \cite{Roccia2016}. The issue lies in the fact that the flight of biological creatures is mainly characterized by non-linear and steady flows \cite{Roccia2016}. This non-linear lift distribution is largely caused by the low Reynolds number that these small bodies fly at and also the low aspect ratio that MAV aircraft typically have.
+
+Wingtip vortices are particularly important and even in general aircraft lead to regulations such as spacing rules between aircraft and aerodynamic noise \cite{Qin2021}. 
+
+
+
+
+
+
+
 
 
 
