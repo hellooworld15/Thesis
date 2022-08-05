@@ -18,7 +18,9 @@
 %\fi
 
 % Add spaces between paragraphs
-\setlength{\parindent}{0pt}
+\setlength{\parindent}{1.0pt}
+% \renewcommand{\baselinestretch}{1.5} 
+\linespread{1.5}
 \setlength{\parskip}{\baselineskip}
 
 % Ragged bottom avoids extra whitespaces between paragraphs
@@ -148,7 +150,7 @@
 % University guidelines
 
 % \doublespacing
-\onehalfspacing
+% \onehalfspacing
 % \singlespacing
 
 
@@ -344,3 +346,12 @@ commentstyle=\color{gray}\ttfamily
 \newcommand{\code}[1]{\texttt{#1}}
 % \newcommand\myworries[1]{\textcolor{red}{#1}}
 \usepackage{todonotes}
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=black
+}
