@@ -70,8 +70,8 @@ The dihedral angle ($\gamma$) is the angle between the wing and the $y_b$ axis, 
 \end{figure}
 
 \section{Twist and Incidence}
-The wing twist angle ($\theta_t$) is the angle between the tip chord reference line and the root chord. By convention, a positive wing twist angle is defined as a downward twist on the wing. Figure \ref{fig:twist} shows an example of this. Another significant parameter is the wing incidence angle ($\theta_i$) which is the angle between the fuselage reference line and the root chord line. In this case, a positive incidence angle is defined as an upward twisted root chord. \\
-\\
+The wing twist angle ($\theta_t$) is the angle between the tip chord reference line and the root chord. By convention, a positive wing twist angle is defined as a downward twist on the wing. Figure \ref{fig:twist} shows an example of this. Another significant parameter is the wing incidence angle ($\theta_i$) which is the angle between the fuselage reference line and the root chord line. In this case, a positive incidence angle is defined as an upward twisted root chord. 
+
 The wing twist is often used to redistribute the lift along the wing's surface. The wing tip is the last wing surface that will experience stall; particularly when in a steep climb or roll manoeuvre. By twisting the wingtip downwards with respect to the rest of the wing, the effective angle of attack will be lower at the wingtip than at the root. This means that the root will stall before the wingtip. This is desirable as control surfaces such as ailerons lose their effectiveness when the wingtips stall first. 
 
 
@@ -125,7 +125,7 @@ Figure \ref{fig:refernce} provides a visualisation to assist with the following 
   \label{fig:refernce}
 \end{figure}
 
-\section{Earth Centered Axes: denoted as ($x_e$, $y_e$, $z_e$)}
+\section{Earth Centered Axes: denoted as \texorpdfstring{($x_e$, $y_e$, $z_e$)}{L}}
 The Earth centered axes is a global reference frame with the centre of the Earth's origin. From the Earth's centre, three orthogonal axes remain fixed to the Earth. This axis is primarily used when describing the position of aircraft. Further visualisation of this reference frame is shown in Figure \ref{fig:refernceEarth}. As Earth has an ellipsoid shape (rather than a sphere), the position is described in terms of the latitude ($\phi$), longitude ($\lambda$), and altitude (h).
 
 \begin{figure}[H]
@@ -136,17 +136,17 @@ The Earth centered axes is a global reference frame with the centre of the Earth
   \label{fig:refernceEarth}
 \end{figure}
 
-\section{Local-Vertical, Local-Horizontal Axes: denoted as ($x_v$, $y_v$, $z_v$)}
+\section{LVLH Axes: denoted as \texorpdfstring{($x_v$, $y_v$, $z_v$)}{L}}
  This axis frame translates with the aircraft and is aligned with the Earth axes previously described. It is shown in Figure \ref{fig:refernce}.
 
-\section{Body Axes: denoted as ($x_b$, $y_b$, $z_b$)} 
+\section{Body Axes: denoted as \texorpdfstring{($x_b$, $y_b$, $z_b$)}{L}} 
 This axis is positioned at the aircraft's centre of gravity. Figure \ref{fig:refernce} shows this position in the aircraft's centre. The body axes translate with the aircraft and are highlighted in orange in Figure \ref{fig:refernce}.
 
-\section{Stability Axes: denoted as ($x_s$, $y_s$, $z_s$)} 
+\section{Stability Axes: denoted as \texorpdfstring{($x_s$, $y_s$, $z_s$)}{L}} 
 The stability axis has its origin at the centre of gravity, shown in Figure \ref{fig:refernce}. It translates with the aircraft's movement. $x_s$ aligns with the air path and is described as an offset from $x_b$ by an angle of $\alpha$ (further described in \ref{subsubsec:keyparam}). $y_s$ is aligned with the body axes $y_b$ and $z_s$ acts perpendicular to both $x_s$ and $y_s$.
 
 
-\section{Air Path Axes: denoted as ($x_a$, $y_a$, $z_a$)}
+\section{Air Path Axes: denoted as \texorpdfstring{($x_a$, $y_a$, $z_a$)}{L}}
 The air path axis has its origin at the centre of gravity. $x_a$ is aligned with the relative air path and is offset from $x_b$ by the angle of attack ($\alpha$). $y_a$ is also aligned with the relative air path and is offset from the $y_b$ by the sideslip angle ($\beta$). $z_a$ is perpendicular to both $x_a$ and $y_a$. 
 
 \section{Key Parameters}
@@ -314,7 +314,7 @@ The lateral stability of an aircraft is based on the change in $C_N$ and $C_L$ w
 \end{equation}
 
 
-A positive sideslip angle change for directional stability must produce a positive yaw moment change. A positive yaw moment shifts the aircraft to re-align the body and wind axes, reducing the sideslip angle. This is described in Equation \ref{eqn:sideslip}. \\
+A positive sideslip angle change for directional stability must produce a positive yaw moment change. A positive yaw moment shifts the aircraft to re-align the body and wind axes, reducing the sideslip angle. This is described in Equation \ref{eqn:sideslip}. 
 
 Similarly, the derivative of the roll moment with respect to the sideslip angle can be used to determine the dihedral effect shown in Equation \ref{eqn:dihedral}.
 
@@ -322,8 +322,8 @@ Similarly, the derivative of the roll moment with respect to the sideslip angle 
     C_{l_\beta} = \frac{\delta C_l}{\delta \beta} < 0
     \label{eqn:dihedral}
 \end{equation}
-A positive sideslip angle change will produce a negative rolling moment to be laterally stable. This causes an aircraft to roll away from the relative wind flow. Hence a yawing movement to align with the air path is produced. This condition is given in Equation \ref{eqn:dihedral}. \\ 
-\\
+A positive sideslip angle change will produce a negative rolling moment to be laterally stable. This causes an aircraft to roll away from the relative wind flow. Hence a yawing movement to align with the air path is produced. This condition is given in Equation \ref{eqn:dihedral}. 
+
 However, it is possible to have an aircraft that meets these criteria but is still hard to control. If the yaw or roll is too stiff (i.e. $C_{N_\beta}$ is positive with a large magnitude and $C_{L_\beta}$ is negative with a large magnitude), then the aircraft can still become impossible to manoeuvre. Hence the limitations of $C_{N_\beta}$ and $C_{L_\beta}$ are primarily limited by the actual controllability of the aircraft. 
 
 
@@ -390,7 +390,7 @@ The Reynolds number is a parameter for describing the flow of the fluid being in
 %     \label{fig:Re2}
 % \end{figure}
 
-High Reynolds values ($> 10^{6}$) indicate that the viscous forces only account for a small amount of the flow and hence the flow is essentially inviscid. For low Reynolds number values ($< 10^{5}$), the viscous forces account for a significant portion of the flow and must be considered.\\
+High Reynolds values ($> 10^{6}$) indicate that the viscous forces only account for a small amount of the flow and hence the flow is essentially inviscid. For low Reynolds number values ($< 10^{5}$), the viscous forces account for a significant portion of the flow and must be considered.
 
 
 
