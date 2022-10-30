@@ -120,7 +120,8 @@
 %\usepackage{sty/caption/subcaption}
 \usepackage{subcaption}
 \usepackage{cleveref}
-\crefdefaultlabelformat{\thesection.#2#1#3} 
+\captionsetup[subfigure]{subrefformat=simple,labelformat=simple}
+\renewcommand\thesubfigure{(\alph{subfigure})}
 
 % Support pdf as graphics
 \usepackage{graphicx}
