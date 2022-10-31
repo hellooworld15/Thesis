@@ -3,11 +3,12 @@
 \chapter{Results and Discussion} 
 
 \section{Wind Tunnel Results}
+Wind tunnel 
 
 \subsection{Aerodynamic Coefficient of Lift}
-
-
-\begin{figure*}[!ht]
+\todo{fix the fig to Figure}
+\cref{fig:Cl_10ms_6000} and \cref{fig:Cl_10ms_11000} show that as the motor speed increases from 6000RPM to 11000RPM the co-efficient of lift increases slightly for both the tractor and pusher configurations. The lift curve also does not drop off as typically seen in aircraft. The tractor configuration sees an increase in the lift coefficient beyond the stall point while the pusher configuration has a linear decrease in the lift coefficient beyond the stall point. Increasing the airspeed dramatically decreases the lift coefficient. This is seen at all motor speeds and is shown between \cref{fig:Cl_10ms_6000} and \cref{fig:Cl_20ms_6000} as well as between \cref{fig:Cl_10ms_11000} and \cref{fig:Cl_20ms_11000}
+\begin{figure}[H]
     \centering
     \begin{subfigure}[b]{0.467\textwidth}
         \centering
@@ -33,20 +34,30 @@
         \caption{Coefficient of lift at 20m/s airspeed and 11000RPM motor speed}
         \label{fig:Cl_20ms_11000}
     \end{subfigure}
-\end{figure*}
+    \caption{Coefficient of lift variation with various conditions for the pusher, tractor and no propeller configurations }
+\end{figure}
 
 \subsection{Aerodynamic Coefficient of Drag}
-
-\begin{figure}[!ht]
+Figure \ref{fig:Cd_11000RPM} shows that as the airspeed of the wind tunnel increased the coefficient of drag shifted upwards for both the pusher and tractor configration. The drag for both the tractor and puller configuration at 10m$s^{-1}$ airspeed is negative an indicates that the drag on the MAV model is being reduced with the addition of the propeller to the MAV model. The highest coefficient of drag is seen when no propeller is operating on the MAV model. When no propeller is added, no significant changes are seen with airspeed for the coefficient of drag. The tractor configuration in general reduces drag compared with the pusher configuration, this is most clearly seen at 20m$s^{-1}$ in Figure \ref{fig:Cd_11000RPM}. As the airspeed increases the coefficient of drag is also seen to increase for the pusher and tractor configuration.
+\todo{change line style here }
+\begin{figure}[H]
     \centering
-    \includegraphics[scale = 0.1] {05_Results/Figs/Cd/110000RPM_Cd.png}
-    \caption{Caption}
+    \includegraphics[scale = 0.7]{05_Results/Figs/Cd/110000RPM_Cd.png}
+    \caption{Coefficient of drag variation at 11000RPM motor speed for the tractor, pusher and no propeller configurations}
     \label{fig:Cd_11000RPM}
+\end{figure}
+Figure \ref{fig:Cd_20ms} shows minimal differences between the pusher and tractor configurations. The addition of the propeller increases drag at 6000RPM, however as the motor speed increases to 11000RPM there is a significant drop in the coefficient of drag for both the tractor and pusher configuration. 
+\todo{get rid of extra no prop lines - keep one only}
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale = 0.7]{05_Results/Figs/Cd/20ms_Cd.png}
+    \caption{Coefficient of drag variation at 20ms airspeed for the tractor, pusher and no propeller configuration}
+    \label{fig:Cd_20ms}
 \end{figure}
 
 \subsection{Pitching Moment Coefficient}
 
-\begin{figure*}[!ht]
+\begin{figure}[H]
     \centering
     \begin{subfigure}[b]{0.467\textwidth}
         \centering
@@ -72,11 +83,11 @@
         \caption{Pitching Moment Coefficient at 20m/s airspeed and 11000RPM motor speed}
         \label{fig:Cm_20ms_11000}
     \end{subfigure}
-\end{figure*}
+\end{figure}
 
 \subsection{Yawing Moment Coefficient}
 
-\begin{figure*}[!ht]
+\begin{figure*}[H]
     \centering
     \begin{subfigure}[b]{0.467\textwidth}
         \centering
@@ -107,7 +118,7 @@
 
 \subsection{Rolling Moment Coefficient}
 
-\begin{figure*}[!ht]
+\begin{figure*}[H]
     \centering
     \begin{subfigure}[b]{0.467\textwidth}
         \centering
@@ -138,7 +149,7 @@
 \subsection{Static Margin}
 
 
-\begin{figure*}[!ht]
+\begin{figure*}[H]
     \centering
     \begin{subfigure}[b]{0.467\textwidth}
         \centering
@@ -226,6 +237,35 @@
      \hfill
 
         
+\end{figure}
+
+\subsection{Model Validation}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{05_Results/Figs/VAP/genMAV/dimensions.png}
+    \label{fig:genMAVDimensions}
+\end{figure}
+
+\begin{figure}[H]
+         \centering
+         \includegraphics[width=0.5\textwidth]{05_Results/Figs/VAP/genMAV/GenMAVModelValidation1.png}
+         \label{fig:genMAV_Cm}
+         \caption{}
+\end{figure}
+
+\begin{figure}[H]
+         \centering
+         \includegraphics[width=0.5\textwidth]{05_Results/Figs/VAP/genMAV/GenMAVModelValidation2.png}
+         \label{fig:genMAV_Cl_roll}
+         \caption{}
+\end{figure}
+
+\begin{figure}
+         \centering
+         \includegraphics[width=\textwidth]{05_Results/Figs/VAP/genMAV/GenMAVModelValidation3.png}
+         \label{fig:genMAV_Cn}
+         \caption{}
 \end{figure}
 
 
