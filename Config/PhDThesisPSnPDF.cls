@@ -881,7 +881,7 @@ wish to left align your text}
 \newcommand{\thesupervisor}{\@supervisor}
 
 % Supervisor Title (Supervisor - Default, can be changed)
-\newcommand{\@supervisorrole}{Supervisors: }
+\newcommand{\@supervisorrole}{Supervisor: }
 \newcommand{\supervisorrole}[1]{\renewcommand{\@supervisorrole}{#1}}
 
 % Supervisor width to align
