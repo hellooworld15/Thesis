@@ -1,26 +1,44 @@
 \graphicspath{{./Figs/}}
 
 \chapter{Theory and Methodology}
-This chapter outlines the theory and Methodology used create, test and collect the data required for the wing-propeller interaction analysis. 
-
+This chapter outlines the theory and Methodology used to create, test and collect the data required for the wing-propeller interaction analysis. 
 \section{Material Choice}
-In order to readily edit and modify the model to be tested 3D printing was used to print the final developed model. 3D printing has become increasingly common when developing models to be testing in wind tunnels. Polyatic acid (PLA) filament was used to print the main body of the model as this is the most widely used and avaliable filament for 3D printing purposes. It has a reasonably low melting point of $\approx$ 150 $^{\circ}$. good layer adhesion and. It can also be extruded in a variety of ways in order to develop different textures on the surface of the 3D model. This is partiularly significant for MAVs as the surface of aircraft are typically smooth in order to reduce viscous drag effects. 3D printed models often have ridges between layers which have been printed. However \todo{interrogate Ben}
+In order to readily edit and modify the model to be tested, 3D printing was used to print the final developed model. 3D printing has become increasingly common when developing models testing in wind tunnels. Polylactic acid (PLA) filament was used to print the main body of the model as this is the most widely used and available filament for 3D printing purposes. PLA has a low melting point of $\approx$ 150 $^{\circ}$, good layer adhesion and structural strength. PLA can also be extruded in a variety of ways in order to develop different textures on the surface of the 3D model. This is particularly significant for MAVs as aircraft surfaces are typically smooth to reduce viscous drag effects. 3D printed models may have thin ridges between layers when printed, however, the extrusion rate, nozzle size, temperature, and bed temperature can all be set to mitigate this issue as much as possible. For the wings and tail however a lightweight PLA was used in order to print a smoother surface. This is particularly important for the wings and tail as these are the main surfaces which provide lift for the aircraft. By using a lighterweight PLA, the structure also allows for some bending as seen in typical wing shapes, rather than printing with normal PLA to produce a rigid structure.  
 
 
 \section{FreeCAD}
-FreeCAD is a 3D parametric modeler and was used with provided python scripts to produce fuselage, wing and tail shapes when given input parameters to define the shape and geometry. Various model shapes were produced with the aim of making the model 3D printable in order to allow for ease of manufacturing and testing. Several design constraints had to be considered when developing the model due to the structural strength of the PLA used for 3D-printing and the limitations . the wings and tail could not be 
-\todo{finish + add photo}
+FreeCAD is a 3D parametric modeler and was used with python scripts provided by Dries Verstraete to produce fuselage, wing and tail shapes when given input parameters to define the shape and geometry. Various model shapes were produced with the aim of making the model 3D printable in order to allow for ease of manufacturing and testing. Several design constraints had to be considered when developing the model due to the structural strength of the PLA used for 3D-printing and the limitations. The wings and tail could not be too small in order to print the aerofoil shape accurately.\\
+\\ The TL54 airfoil was used for the main wings due to this airfoil having a high lift coefficient and low pitching moment. The wingspan and chord length were 855mm and 180mm respectively for the model. The fuselage was designed to be 600mm and a V-tail which had a maximum chord, minimum chord and span of 105mm, 55mm and 145mm respectively was used.  
 
-The model was also fitted to mount into the 3x4 wind tunnel for testing as shown in Figure \todo{add figure here}
+\begin{figure}[H]
+\centering
+\includegraphics[]{04_Methodology/Figs/model2.jpg}
+\caption{Final model for wind tunnel testing in FreeCAD}
+\label{fig:freeCADModel}
+\end{figure}
+
+
+The model shown in Figure \ref{fig:freeCADModel} was also fitted to mount into the 3x4 wind tunnel for testing as shown in Figure \ref{fig:modelWithTunnel}
+
+\begin{figure}
+    \centering
+    \includegraphics{04_Methodology/Figs/ModelWithtunnel.JPG}
+    \caption{FreeCAD model mounted in Wing tunnel }
+    \label{fig:modelWithTunnel}
+\end{figure}
+
+The model size was also chosen in order to reduce the blockage that will be experienced when using the model during wind tunnel testing. The blockage varied from 4.9\% to 8.7\% for an angle of attack range from -5$^\circ$ to 15$^\circ$. The wing span was also limited in size in order to ensure that wind tunnel interference would not influence the results. 
 
 \section{VAP 3.5}
 VAP 3.5 is a open-source software which uses the High-Order Free Wake (HOFW) \todo{abb} method in order to determine the aerodynamic performace of MAV designs. \\
+
+The HOFW method was developed to allow for the computation of propeller-wing system interactions. This is made possible by sing higher-order vorticity elements to represent the wings and propeller blads as lifting surfaces. Higher order elements provide a higher force resolution and are more computationally stable wakes than the alternative vortex-lattice method. The HOFW method is able to maintain similar ease of geometric presentation which is seen in VLM. 
 
 The HOFW method
 
 
 \section{XFOIL}
-XFOIL is another open source free to use software which has been developed by Harold Youngren and Mark Drela. The software is used to analyse 2D airfoils for their aerodynamic characteristics. XFOIL was used to produce aerofoil data which accounted for viscous effects. It is essential that the software account for the viscous effects as this has an essential role in the flow characteristics accross the surface of an aircraft wing. This is especially true at low Reynolds numbers where the  \todo{finsiht this}. XFOIL accounts for the viscous effects by using the wake momentum thickness to determine the skin friction produced as fluid passes over the surface of the airfoil as given by Equation \ref{eqn:XFOIL}. 
+XFOIL is another open source free to use software which has been developed by Harold Youngren and Mark Drela. The software is used to analyse 2D airfoils for their aerodynamic characteristics. XFOIL was used to produce aerofoil data which accounted for viscous effects. It is essential that the software account for the viscous effects as this has an essential role in the flow characteristics accross the surface of an aircraft wing. XFOIL accounts for the viscous effects which are particularly seen at lower Reynolds numbers, by using the wake momentum thickness to determine the skin friction produced as fluid passes over the surface of the airfoil as given by Equation \ref{eqn:XFOIL}. 
 
 
 \begin{equation}
@@ -37,7 +55,6 @@ Where:
 
 In this manner the skin friction losses can be determined and accounted for when running the VAP software to analyse the stability of the model. 
 
-\section{Model Development}
 
 \section{Wind Tunnel Testing}
 In order to analyse the stability of the final developed model in the three configurations, the model was mounted in the wind tunnel to determine the forces and moments acting at several conditions in order to assess the effect that adding a propeller has on the stability of the model
@@ -48,66 +65,87 @@ In order to analyse the stability of the final developed model in the three conf
 Wind tunnel tests were taken for several variations of Aoa, airspeed, propeller speed and configuration. These are outlined below
 
 \begin{itemize}
-    \item Aoa: -5 $^{\circ}$ to 15 $^{\circ}$ in increments of 2$^{^circ}$
+    \item Aoa: -5 $^{\circ}$ to 15 $^{\circ}$ in increments of 2$^{\circ}$
     \item Airspeed: 10m/s, 15m/s and 20m/s
     \item Motor speed: 6000RPM, 9000RPM, 11000RPM
     \item Configuration: No propeller, tractor and pusher
 \end{itemize}
 
-A safety net was placed in the wind tunnel in case any parts of the model were unable to remain attached as the airspeed increased to 20m/s.
+A safety net was placed in the wind tunnel in case any parts of the model were unable to remain attached as the airspeed increased to 20m/s as shown in Figure \ref{fig:windTunnelNet}. An external cooler was used to ensure that the wind tunnel engine itself did not overheat and is shown in Figure \ref{fig:engineCooler}.
 
-\begin{figure}[!ht]
+\begin{figure}[H]
+\centering
+\begin{subfigure}[b]{0.3\textwidth}
     \centering
-    \includegraphics[scale =0.1]{04_Methodology/Figs/windTunnelNet.jpg}
-    \caption{Safety net to }
+    \includegraphics[scale =0.05]{04_Methodology/Figs/windTunnelNet.jpg}
+    \caption{Safety net to prevent any model parts from damaging the wind tunnel if the mount were to disconnect}
     \label{fig:windTunnelNet}
-\end{figure}
+\end{subfigure}
 
-\begin{figure}[!ht]
-    \centering
+\hfill
+\begin{subfigure}[b]{0.3\textwidth}
+     \centering
     \includegraphics[scale=0.1]{04_Methodology/Figs/cooler.jpg}
-    \caption{Caption}
+    \caption{Cooler for wind tunnel engine}
     \label{fig:engineCooler}
+\end{subfigure}
+\hfill
+    
 \end{figure}
 
-The nano25 load cell was used to record the forces and moments acting on the model about the mounting position at 25$\overline{c}$. 
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[scale=0.1]{04_Methodology/Figs/cooler.jpg}
+%     \caption{Caption}
+%     \label{fig:engineCooler}
+% \end{figure}
+
+The nano25 load cell was used to record the forces and moments acting on the model about the mounting position at 25$\overline{c}$ and is shown in Figure \ref{fig:LoadCella}. The model mount was then attached over the load cell as shown in Figure \ref{fig:LoadCellb}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[scale=0.08]{04_Methodology/Figs/loadCellMount}
-    \caption{Nano 25 load cell mount}
-    \label{fig:LoadCella}
+    \begin{subfigure}[b]{0.3\textwidth}
+        \centering
+        \includegraphics[scale=0.08]{04_Methodology/Figs/loadCellMount}
+        \caption{Nano 25 load cell mount}
+        \label{fig:LoadCella}
+    \end{subfigure}
+
+    \hfill
+    \begin{subfigure}[b]{0.3\textwidth}
+        \centering
+        \includegraphics[scale=0.1]{04_Methodology/Figs/mount}
+        \caption{Model mount in 3x4 wind tunnel}
+        \label{fig:LoadCellb}
+    \end{subfigure}
+    \hfill
+    
 \end{figure}
 
-The model mount was then attached over the load cell. 
-
-
-\begin{figure}[!ht]
-    \centering
-    \includegraphics[scale=0.1]{04_Methodology/Figs/mount}
-    \label{fig:LoadCellb}
-\end{figure}
 
 The model was then attached in three main configurations. These were mounting the propeller without a propeller, in a tractor and pusher configurations.
 
 
-\begin{figure}[!ht]
+\begin{figure}[H]
      \centering
      \begin{subfigure}[b]{0.3\textwidth}
          \centering
-         \includegraphics[scale=0.1]{04_Methodology/Figs/noprop}
+         \includegraphics[scale=0.05]{04_Methodology/Figs/noprop}
+         \caption{Model with no propeller attached}
           \label{fig:noprop}
      \end{subfigure}
      \hfill
      \begin{subfigure}[b]{0.3\textwidth}
              \centering
-             \includegraphics[scale = 0.1]{04_Methodology/Figs/pusher}
+             \includegraphics[scale = 0.05]{04_Methodology/Figs/pusher}
+             \caption{Model in pusher configuration}
              \label{fig:pusher}
      \end{subfigure}
      \hfill
      \begin{subfigure}[b]{0.3\textwidth}
              \centering
-             \includegraphics[scale=0.1]{04_Methodology/Figs/tractors}
+             \includegraphics[scale=0.05]{04_Methodology/Figs/tractors}
+             \caption{Model in tractor configuration}
              \label{fig:tractors}
      \end{subfigure}
         \caption{Examples of MAVs with category}
@@ -122,11 +160,7 @@ The wind tunnel was then callibrated for wind speed, atmospheric conditions and 
     \label{fig:pitchGauge}
 \end{figure}
 
-When using the prop the motor was supplied with a 7.4V battery and the RPM was set to $\approx 6000 RPM$, $\approx 9000RPM$ and $\approx 11000 RPM$. 
-
-
-
-
+When using the prop the motor was supplied with a 7.4V battery and the RPM was set to $\approx 6000 RPM$, $\approx 9000RPM$ and $\approx 11000 RPM$. The bias at each airspeed tested was first calculated in order to determine the change in forces and moments across the angles of attack tested. The yawing 
 
 
 \section{Stability Calculation}
