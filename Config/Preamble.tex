@@ -6,6 +6,9 @@
 % Set {innerside margin (use left or inner) / outerside margin (right or outer) / 
 % topmargin / bottom margin} and other page dimensions
 % Minimum specified in requirements:
+
+\usepackage{notoccite}
+
 \ifsetCustomMargin
   \RequirePackage[inner=35mm,outer=25mm,top=25mm,bottom=25mm,includehead,includefoot]{geometry}
 %  \setFancyHdr % To apply fancy header after geometry package is loaded
@@ -96,8 +99,7 @@
 
 % \usepackage[hyphens]{url}
 \usepackage{xurl}
-\usepackage{hyperref}
-\urlstyle{tt}
+
 
 \usepackage[acronym,nonumberlist,toc]{glossaries}
 % \usepackage[acronym]{glossaries}
@@ -186,6 +188,7 @@
 
 % Add `custombib' in the document class option to use this section
 \ifuseCustomBib
+
    \usepackage[numbers]{natbib} % CustomBib
 
 % If you would like to use biblatex for your reference management, as opposed to the default `natbibpackage` pass the option `custombib` in the document class. Comment out the previous line to make sure you don't load the natbib package. Uncomment the following lines and specify the location of references.bib file
@@ -358,3 +361,5 @@ commentstyle=\color{gray}\ttfamily
     linkcolor=black,
     urlcolor=black
 }
+
+\urlstyle{tt}
