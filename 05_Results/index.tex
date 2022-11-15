@@ -3,10 +3,11 @@
 \chapter{Results and Discussion} 
 
 \section{Wind Tunnel Results}
-\todo{brief intro}
+This chapter outlines the final wind tunnel results for all three main configurations; tractor, pusher and no propeller. It outlines the main trends in the stability coefficients Cl, Cn, and Cm corresponding to the MAV model's roll, yaw and pitch. These results are analysed with critical observations and trends identified. A validation of the wind tunnel results is also conducted with VAP 3.5 to compare the accuracy of the results obtained with any discrepancies explained.
+
 
 \subsection{Aerodynamic Coefficient of Lift}
-\Cref{fig:Cl_10ms_6000} and \Cref{fig:Cl_10ms_11000} show that as the motor speed increases from 6000RPM to 11000RPM the coefficient of lift increases slightly for both the tractor and pusher configurations. The lift curve also does not drop off as typically seen in aircraft\todo{add citation}. The tractor configuration sees an increase in the lift coefficient beyond the stall point while the pusher configuration has a linear decrease in the lift coefficient beyond the stall point. Increasing the airspeed to 20m$s^{-1}$ at the higher 11000RPM speed delays the MAV model's stall as angle of attack increases in all configurations. Increasing the airspeed when the motor is at 6000RPM increases the max coefficient of lift seen for the pusher configuration \todo{ADD VALUES} and also delays stall. The tractor configuration has a deeper stall beyond the stall point when airspeed is at 20m$s^{-1}$. These trends due to airspeed are shown between \Cref{fig:Cl_10ms_6000} and \Cref{fig:Cl_20ms_6000} as well as between \Cref{fig:Cl_10ms_11000} and \Cref{fig:Cl_20ms_11000}. 
+\Cref{fig:Cl_10ms_6000} and \Cref{fig:Cl_10ms_11000} show that as the motor speed increases from 6000RPM to 11000RPM the coefficient of lift increases slightly for both the tractor and pusher configurations. As typically seen in aircraft\todo{add citation}, the lift curve also does not drop off. The tractor configuration sees an increase in the lift coefficient beyond the stall point, while the pusher configuration has a linear decrease in the lift coefficient beyond the stall point. Increasing the airspeed to 20m$s^{-1}$ at the higher 11000RPM speed delays the MAV model's stall as the angle of attack increases in all configurations. Increasing the airspeed when the motor is at 6000RPM increases the max coefficient of lift seen for the pusher configuration \todo{ADD VALUES} and delays stall. The tractor configuration has a deeper stall beyond the stall point when airspeed is at 20m$s^{-1}$. These trends due to airspeed are shown between \Cref{fig:Cl_10ms_6000} and \Cref{fig:Cl_20ms_6000} as well as between \Cref{fig:Cl_10ms_11000} and \Cref{fig:Cl_20ms_11000}.
 
 \begin{figure}[H]
     \centering
@@ -59,7 +60,7 @@ Figure \ref{fig:Cd_20ms} shows minimal differences between the pusher and tracto
 
 \subsection{Pitching Moment Coefficient}
 
-Figure \ref{fig:Cm_graphs} shows that as the motor speed increases from 6000RPM to 11000RPM the tractor configuration experienced a decrease in pitching coefficient compared with the no propeller model up until stall at approximately 12$^\circ$ AoA. The pusher configration experienced an increase in the pitching moment compared with the no propeller model. Increasing the airspeed decreased the pitching moment for all motor speeds.
+Figures \Cref{fig:Cm_10ms_6000} to \Cref{fig:Cm_20ms_11000} shows that as the motor speed increases from 6000RPM to 11000RPM the tractor configuration experienced a decrease in pitching coefficient compared with the no propeller model up until stall at approximately 12$^\circ$ AoA. The pusher configration experienced an increase in the pitching moment compared with the no propeller model. Increasing the airspeed decreased the pitching moment for all motor speeds.
 
 \begin{figure}[H]
     \centering
@@ -87,7 +88,7 @@ Figure \ref{fig:Cm_graphs} shows that as the motor speed increases from 6000RPM 
         \caption{Pitching Moment Coefficient at 20m/s airspeed and 11000RPM motor speed}
         \label{fig:Cm_20ms_11000}
     \end{subfigure}
-    \label{fig:Cm_graphs}
+    
 \end{figure}
 
 
