@@ -5,6 +5,8 @@
 \section{Wind Tunnel Results}
 This chapter outlines the final wind tunnel results for all three main configurations; tractor, pusher and no propeller. It outlines the main trends in the stability coefficients Cl, Cn, and Cm corresponding to the MAV model's roll, yaw and pitch. These results are analysed with critical observations and trends identified. A validation of the wind tunnel results is also conducted with VAP 3.5 to compare the accuracy of the results obtained with any discrepancies explained.
 
+\todo{Table of variables/geometry which defines the MAV}
+
 
 \subsection{Aerodynamic Coefficient of Lift}
 \Cref{fig:Cl_10ms_6000} and \Cref{fig:Cl_10ms_11000} show that as the motor speed increases from 6000RPM to 11000RPM the coefficient of lift increases slightly for both the tractor and pusher configurations. As typically seen in aircraft\todo{add citation}, the lift curve also does not drop off. The tractor configuration sees an increase in the lift coefficient beyond the stall point, while the pusher configuration has a linear decrease in the lift coefficient beyond the stall point. Increasing the airspeed to 20m$s^{-1}$ at the higher 11000RPM speed delays the MAV model's stall as the angle of attack increases in all configurations. Increasing the airspeed when the motor is at 6000RPM increases the max coefficient of lift seen for the pusher configuration \todo{ADD VALUES} and delays stall. The tractor configuration has a deeper stall beyond the stall point when airspeed is at 20m$s^{-1}$. These trends due to airspeed are shown between \Cref{fig:Cl_10ms_6000} and \Cref{fig:Cl_20ms_6000} as well as between \Cref{fig:Cl_10ms_11000} and \Cref{fig:Cl_20ms_11000}.
@@ -58,9 +60,11 @@ Figure \ref{fig:Cd_20ms} shows minimal differences between the pusher and tracto
     \label{fig:Cd_20ms}
 \end{figure}
 
+
+
 \subsection{Pitching Moment Coefficient}
 
-Figures \Cref{fig:Cm_10ms_6000} to \Cref{fig:Cm_20ms_11000} shows that as the motor speed increases from 6000RPM to 11000RPM the tractor configuration experienced a decrease in pitching coefficient compared with the no propeller model up until stall at approximately 12$^\circ$ AoA. The pusher configration experienced an increase in the pitching moment compared with the no propeller model. Increasing the airspeed decreased the pitching moment for all motor speeds.
+Figures \Cref{fig:Cm_10ms_6000} to \Cref{fig:Cm_20ms_11000} shows that for all cases the pitching moment of the MAV model decreases as the angle of attack increases. This leads to a stable MAV in all cases as the longitudinal stability is maintained due to the pitching down motion of the MAV as the \acrshort{AoA} increases. Figures \Cref{fig:Cm_10ms_6000} to \Cref{fig:Cm_20ms_11000} also sow that as the motor speed increases from 6000RPM to 11000RPM the tractor configuration experienced a decrease in pitching coefficient compared with the no propeller model up until stall at approximately 12$^\circ$ AoA. The pusher configration experienced an increase in the pitching moment compared with the no propeller model. Increasing the airspeed decreased the pitching moment for all motor speeds. This is further outlined in Table \ref{} \todo{finish table of Cmalpha values}
 
 \begin{figure}[H]
     \centering
@@ -187,22 +191,27 @@ The yawing coefficient was larger for the tractor configuration due to a larger 
 \end{figure}
 
 
-\section{VAP Validation}
+\section{VAP 3.5 Validation}
+Low speed aerodynamics generally see complex flow distributions and phenomena as dicussed in Sections \ref{sec:Reynolds} and \ref{sec:Reynolds2}. In order to evaluate the usage of VAP 3.5 for the wind tunnel tests conducted, a wing validation and model validation was performed with comparison to the GenMAV model which has been previously evaluated with the Athena Vortex Lattice (AVL) method in order to estimate the stability derivatives and moments of the GenMAV. 
 
 \subsection{Wing Validation}
-
+A wing validation against Fluent CFD results is given in Figures \ref{fig:wing0300} to Figure \ref{fig:001000b} \cite{}. This data was taken at a Reynolds number of 2.32 $\times 10^{5}$ at a freestream velocity of 20$m/s$ and density 1.225$kg/m^3$. 
 
 \begin{figure}[H]
      \centering
      \begin{subfigure}[b]{0.45\textwidth}
          \centering
          \includegraphics[width=\textwidth]{05_Results/Figs/VAP/genMAV/taper3a.png}
+         \caption{}
+         \label{fig:wing0300}
 
      \end{subfigure}
      \hfill
      \begin{subfigure}[b]{0.45\textwidth}
          \centering
          \includegraphics[width=\textwidth]{05_Results/Figs/VAP/genMAV/taper3b.png}
+         \caption{}
+         \label{fig:wing0300b}
       
      \end{subfigure}
      \hfill
@@ -241,7 +250,9 @@ The yawing coefficient was larger for the tractor configuration due to a larger 
      \begin{subfigure}[b]{0.45\textwidth}
          \centering
          \includegraphics[width=\textwidth]{05_Results/Figs/VAP/genMAV/taper10b.png}
-      
+         \caption{}
+         
+      \label{fig:001000b}
      \end{subfigure}
      \hfill
 

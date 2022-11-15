@@ -2,13 +2,13 @@
 \graphicspath{{./Figs/}}
 
 \chapter{Background} 
-This chapter outlines the core theory and topics relevant for optimising MAVs and literature regarding the effect of propeller interactions on MAVs. Crucial coefficients, concepts and terminology are explained here. This section will cover general aircraft geometry, aerodynamic forces, reference frames, longitudinal stability, lateral stability and Reynolds number. 
+This chapter outlines the core theory and topics relevant for optimising \acrshort{MAV}s and literature regarding the effect of propeller interactions on \acrshort{MAV}s. Crucial coefficients, concepts and terminology are explained here. This section will cover general aircraft geometry, aerodynamic forces, reference frames, longitudinal stability, lateral stability and Reynolds number. 
 
 \section{Aircraft Geometry}
 Several aircraft geometric parameters will be referred to throughout this thesis. Key parameters discussed are the wingspan, chord length, aspect ratio, sweep, dihedral and twist. Figure \ref{fig:aircraftgeometry} shows some of these.
 
 \section{Span}
-The wingspan ($b$) is the distance from one wing tip to the other. The semi-span (s) is the distance from the fuselage reference line to the wing tip. These parameters are also shown in Figure \ref{fig:aircraftgeometry}. 
+The wingspan (\acrshort{b}) is the distance from one wing tip to the other. The semi-span (\acrshort{s}) is the distance from the fuselage reference line to the wing tip. These parameters are also shown in Figure \ref{fig:aircraftgeometry}. 
 
 \begin{figure}[H]
 % \hspace*{-1.3in}
@@ -23,9 +23,9 @@ The wingspan ($b$) is the distance from one wing tip to the other. The semi-span
 The chord is the distance between the leading and trailing edge of the wings shown in Figure \ref{fig:aircraftgeometry}. The chord is often defined in terms of three main parameters, these are:
 
 \begin{itemize}
-    \item \textbf{Root Chord (denoted $c_r$):} This is the chord length where the wing meets the fuselage and is generally the position where the chord length is the longest. 
-    \item \textbf{Tip Chord (denoted $c_t$):} The tip chord is the chord length at the tips of the wings 
-    \item \textbf{Mean Aerodynamic Chord (MAC):} The mean aerodynamic chord is used to represent the wing in only two dimensions. The MAC is the chord length at which the resultant aerodynamic force acts. The MAC is defined by Equation \ref{eqn:MAC} and is taken from wing tip to wing tip. In the case of a straight tapered wing with a taper ratio, the MAC equation can be simplified to Equation \ref{eqn:MACSimplified}.
+    \item \textbf{Root Chord (denoted \acrshort{$c_r$}):} This is the chord length where the wing meets the fuselage and is generally the position where the chord length is the longest. 
+    \item \textbf{Tip Chord (denoted \acrshort{$c_t$}):} The tip chord is the chord length at the tips of the wings 
+    \item \textbf{Mean Aerodynamic Chord (\acrshort{MAC}):} The mean aerodynamic chord is used to represent the wing in only two dimensions. The \acrshort{MAC} is the chord length at which the resultant aerodynamic force acts. The \acrshort{MAC} is defined by Equation \ref{eqn:MAC} and is taken from wing tip to wing tip. In the case of a straight tapered wing with a taper ratio (\acrshort{lambda}), the \acrshort{MAC} equation can be simplified to Equation \ref{eqn:MACSimplified}.
     
 \end{itemize} 
 
@@ -49,12 +49,12 @@ The chord is the distance between the leading and trailing edge of the wings sho
  The taper ratio is significant as it influences the lift distribution over the wing. By reducing the wing area towards the wing tips, the moment produced by the wings is also reduced. 
  
 \section{Sweep}
-The sweep is the angle ($\Lambda_{LE}$) between the $y_b$ axis and the leading edge. When wings are swept back, the flow is directed outwards along the length of the wing. This also changes the angle of attack towards the wings' tips. A negative sweep angle (generally only seen on experimental aircraft) directs the flow inboard towards the fuselage. Sweep is also used to assist with static longitudinal stability. A positive sweep angle will move the aircraft's aerodynamic center backwards and vice versa. The sweep angle ($\Lambda_{LE}$) can be used to fine-tune the pitch stability. Sweep is also used to delay shock wave formation on wings. In this phenomenon, at high Mach numbers ($>$ 0.8), a sharp discontinuity of pressure is seen in a narrow region travelling through a medium. 
+The sweep is the angle (\acrshort{Lambda}) between the $y_b$ axis and the leading edge. When wings are swept back, the flow is directed outwards along the length of the wing. This also changes the angle of attack towards the wings' tips. A negative sweep angle (generally only seen on experimental aircraft) directs the flow inboard towards the fuselage. Sweep is also used to assist with static longitudinal stability. A positive sweep angle will move the aircraft's aerodynamic center backwards and vice versa. The sweep angle (\acrshort{Lambda}) can be used to fine-tune the pitch stability. Sweep is also used to delay shock wave formation on wings. In this phenomenon, at high Mach numbers ($>$ 0.8), a sharp discontinuity of pressure is seen in a narrow region travelling through a medium. 
 
 
 
 \section{Dihedral}
-The dihedral angle ($\gamma$) is the angle between the wing and the $y_b$ axis, which is represented by the horizontal dotted line in Figure \ref{fig:dihedral}. A dihedral angle is when the wing tip is at a higher point than the root of the wing. This is the opposite for the case of an anhedral angle, also shown in Figure \ref{fig:dihedral}. Having a dihedral angle increases the lateral stability - particularly when banking, as the lower wing will fly at a higher angle of attack than the higher wing. 
+The dihedral angle (\acrshort{gamma}) is the angle between the wing and the $y_b$ axis, which is represented by the horizontal dotted line in Figure \ref{fig:dihedral}. A dihedral angle is when the wing tip is at a higher point than the root of the wing. This is the opposite for the case of an anhedral angle, also shown in Figure \ref{fig:dihedral}. Having a dihedral angle increases the lateral stability - particularly when banking, as the lower wing will fly at a higher angle of attack than the higher wing. 
 
 \begin{figure}[H]
 % \hspace*{-1.3in}
@@ -65,7 +65,7 @@ The dihedral angle ($\gamma$) is the angle between the wing and the $y_b$ axis, 
 \end{figure}
 
 \section{Twist and Incidence}
-The wing twist angle ($\theta_t$) is the angle between the tip chord reference line and the root chord. By convention, a positive wing twist angle is defined as a downward twist on the wing. Figure \ref{fig:twist} shows an example of this. Another significant parameter is the wing incidence angle ($\theta_i$) which is the angle between the fuselage reference line and the root chord line. In this case, a positive incidence angle is defined as an upward twisted root chord. 
+The wing twist angle (\acrshort{thetat}) is the angle between the tip chord reference line and the root chord. By convention, a positive wing twist angle is defined as a downward twist on the wing. Figure \ref{fig:twist} shows an example of this. Another significant parameter is the wing incidence angle (\acrshort{thetai}) which is the angle between the fuselage reference line and the root chord line. In this case, a positive incidence angle is defined as an upward twisted root chord. 
 
 The wing twist is often used to redistribute the lift along the wing's surface. The wing tip is the last wing surface that will experience stall; particularly when in a steep climb or roll manoeuvre. By twisting the wingtip downwards with respect to the rest of the wing, the effective angle of attack will be lower at the wingtip than at the root. This means that the root will stall before the wingtip. This is desirable as control surfaces such as ailerons lose their effectiveness when the wingtips stall first. 
 
@@ -79,16 +79,16 @@ The wing twist is often used to redistribute the lift along the wing's surface. 
 \end{figure}
 
 \section{Aspect Ratio}
-The aspect ratio (AR) is significant when considering an aircraft's aerodynamic efficiency. First, the wing area (S) must be introduced. The AR can be calculated through Equation \ref{eqn:Aspect}.
+The aspect ratio (\acrshort{AR}) is significant when considering an aircraft's aerodynamic efficiency. First, the wing area (\acrshort{S}) must be introduced. The AR can be calculated through Equation \ref{eqn:Aspect}.
 
 \begin{equation}
     AR = \frac{b^2}{S}
     \label{eqn:Aspect}
 \end{equation}
 
- Where b is the wing span and S is the total platform area of the wing, also shown in Figure \ref{fig:aircraftgeometry}, as the area coloured blue. 
+ Where \acrshort{b} is the wing span and \acrshort{S} is the total platform area of the wing, also shown in Figure \ref{fig:aircraftgeometry}, as the area coloured blue. 
 
-Higher aspect wings produce less lift-induced drag - however, they often require more structural support and are typically heavier than lower AR aircraft. High aspect wings are long and thin, whilst low aspect wings are short and wide. Figure \ref{fig:AR} shows two aircraft with high and medium ARs. The Schleicher aircraft shown has a much higher AR. This also means it has high aerodynamic efficiency. 
+Higher aspect wings produce less lift-induced drag - however, they often require more structural support and are typically heavier than lower \acrshort{AR} aircraft. High aspect wings are long and thin, whilst low aspect wings are short and wide. Figure \ref{fig:AR} shows two aircraft with high and medium \acrshort{AR}s. The Schleicher aircraft shown has a much higher \acrshort{AR}. This also means it has high aerodynamic efficiency. 
 
 
 
@@ -96,7 +96,7 @@ Higher aspect wings produce less lift-induced drag - however, they often require
 % \hspace*{-1.3in}
   \centering
   \includegraphics[width=1\linewidth]{03_LiteratureReview/Figs/AspectRatio.JPG}
-  \caption{High and medium aspect ratio aircraft examples \cite{gliderImages}}
+  \caption{High and medium \acrshort{AR} aircraft examples \cite{gliderImages}}
   \label{fig:AR}
 \end{figure}
 
@@ -104,12 +104,12 @@ Higher aspect wings produce less lift-induced drag - however, they often require
 The primary reference frames used to describe the position of an aircraft are:
 \begin{itemize}
     \item Earth Centered Axes
-    \item Local-vertical local-horizontal (LVLH) Axes
+    \item Local-vertical local-horizontal (\acrshort{LVLH}) Axes
     \item Body Axes
     \item Stability Axes
     \item Air Axes
 \end{itemize}
-
+\todo{Up to here with adding acronyms}
 Figure \ref{fig:refernce} provides a visualisation to assist with the following explanations.
 
 \begin{figure}[H]
@@ -187,7 +187,7 @@ To simplify calculations regarding this force distribution, the aerodynamic cent
 % \hspace*{-1.3in}
   \centering
   \includegraphics[width=1\linewidth]{03_LiteratureReview/Figs/Aeroforces2.JPG}
-  \caption{Aerodynamic forces acting on MAV}
+  \caption{Aerodynamic forces acting on \acrshort{MAV}}
   \label{fig:aeroforces}
 \end{figure}
 Two significant aerodynamic coefficients are used as the lift and drag forces coefficients shown in Equations \ref{eqn:lift} and \ref{eqn:drag}. These coefficients are the lift and drag forces when normalised by the dynamic pressure (q) and the wing area (S). 
@@ -345,7 +345,7 @@ However, it is possible to have an aircraft that meets these criteria but is sti
 
 
 
-\section{Reynolds Number}
+\section{Reynolds Number} \label{sec:Reynolds}
 Reynolds number is a dimensionless number used to represent the ratio of inertial forces to viscous forces. It is expressed in Equation \ref{eqn:reynolds} where:
 
 \begin{itemize}
