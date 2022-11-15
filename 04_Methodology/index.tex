@@ -1,21 +1,22 @@
 \graphicspath{{./Figs/}}
 
 \chapter{Theory and Methodology}
-This chapter outlines the theory and Methodology used create, test and collect the data required for the wing-propeller interaction analysis. It covers the developement of the MAV model for testing from python scripts and FreeCAD to the final testing completed in a 3x4m wind tunnel to collect the force and moment data of the model. The software used to validate these results is also explained in this chapter. 
+This chapter outlines the theory and methodology used to create, test and collect the data required for the wing-propeller interaction analysis. It covers the development of the MAV model for testing from python scripts and FreeCAD to the final testing completed in a 3x4ft wind tunnel to collect the force and moment data of the model. The software used to validate these results is also explained in this chapter. 
 
 \section{Material Choice}
-In order to readily edit and modify the model to be tested, 3D printing was used to print the final developed model. 3D printing has become increasingly common when developing models testing in wind tunnels. Polylactic acid (PLA) filament was used to print the main body of the model as this is the most widely used and available filament for 3D printing purposes. PLA has a low melting point of $\approx$ 150 $^{\circ}$, good layer adhesion and structural strength. PLA can also be extruded in a variety of ways in order to develop different textures on the surface of the 3D model. This is particularly significant for MAVs as aircraft surfaces are typically smooth to reduce viscous drag effects. 3D printed models may have thin ridges between layers when printed, however, the extrusion rate, nozzle size, temperature, and bed temperature can all be set to mitigate this issue as much as possible. For the wings and tail however a lightweight PLA was used in order to print a smoother surface. This is particularly important for the wings and tail as these are the main surfaces which provide lift for the aircraft. By using a lightweight PLA, the structure also allows for some bending as seen in typical wing shapes, rather than printing with normal PLA to produce a rigid structure. 
+To readily edit and modify the model to be tested, 3D printing was used to print the final developed model. 3D printing has become increasingly common when developing models testing in wind tunnels \cite{Szwedziak2022}. Polylactic acid (PLA) filament was used to print the main body of the model as this is the most widely used and available filament for 3D printing purposes. PLA has a low melting point of $\approx$ 150 $^{\circ}$, good layer adhesion and structural strength. PLA can also be extruded in various ways to develop different textures on the surface of the 3D model \cite{Butt2021}. This is particularly significant for MAVs as aircraft surfaces are typically smooth to reduce viscous drag effects. 3D printed models may have thin ridges between layers when printed. However, the extrusion rate, nozzle size, temperature, and bed temperature can all be set to mitigate this issue as much as possible \cite{Butt2021} \cite{Olasek2014}. However, a lightweight PLA was used for the wings and tail to print a smoother surface. This is particularly important for the wings and tail as these are the main surfaces that provide lift for the aircraft. Using a lightweight PLA, the structure allows for some bending, as seen in typical wing shapes, rather than printing with standard PLA to produce a rigid structure. 
 
 
 \section{FreeCAD}
-FreeCAD is a 3D parametric modeler and was used with python scripts provided by Dries Verstraete to produce fuselage, wing and tail shapes when given input parameters to define the shape and geometry. Various model shapes were produced with the aim of making the model 3D printable in order to allow for ease of manufacturing and testing. Several design constraints had to be considered when developing the model due to the structural strength of the PLA used for 3D-printing and the limitations. The wings and tail could not be too small in order to print the aerofoil shape accurately.\\
-\\ The TL54 airfoil was used for the main wings due to this airfoil having a high lift coefficient and low pitching moment. The dimensions of the model are also given in Figure \ref{fig:dimension}.
+FreeCAD is a 3D parametric modeller and was used with python scripts provided by Dries Verstraete to produce fuselage, wing and tail shapes when given input parameters to define the shape and geometry. Various model shapes were produced to make the model 3D printable to allow for easy manufacturing and testing. Several design constraints had to be considered when developing the model due to the structural strength of the PLA used for 3D printing and the limitations. The wings and tail could be slightly bigger to print the aerofoil shape accurately.\\
+\\ The TL54 airfoil was used for the main wings due to this airfoil having a high lift coefficient and low pitching moment. The model's dimensions are also given in Figure \ref{fig:dimension22}.
 
 \begin{figure}
     \centering
     \includegraphics{04_Methodology/Figs/dimensions.JPG}
-    \label{fig:dimension}
+    
     \caption{Dimensions of the final MAV model in millimeters}
+    \label{fig:dimension22}
 \end{figure}
 
 The model shown in Figure \ref{fig:freeCADModel} was also fitted to mount into the 3x4 wind tunnel for testing as shown in Figure \ref{fig:modelWithTunnel}.
@@ -39,9 +40,27 @@ The model size was also chosen in order to reduce the blockage that will be expe
 
 
 \section{VAP 3.5}
-VAP 3.5 is a open-source software which uses the High-Order Free Wake (HOFW) \todo{abb} method in order to determine the aerodynamic performace of MAV designs. \\
+VAP 3.5 is a open-source software which uses the High-Order Free Wake (\acrshort{HOFW}) method in order to determine the aerodynamic performace of MAV designs. \\
 
-The HOFW method
+The software is used by first defining the flight conditions and geometry of the model to be tested. The VAP 3.5 model is then generated and run through the potential flow method used by the VAP software. This is used to determine the aerodynamics of the MAV design to be tested. The weight and CG location of the model as determined based on the MAV geometry or explicitly defined in the code used to generate the model. The stability derivatives can be determined based on the CG location and the lift distribution determined in the 
+ VAP potential flow method. A flowchart is given in Figure \ref{fig:flowchart} to outline this process.
+
+ \begin{figure}
+ \includegraphics[]{04_Methodology/Figs/jasmine.png}
+ \label{fig:flowchart}
+ \capion{VAP 3.5 main steps to setup, run and return results from simulation}
+ \end{figure}
+
+
+The HOFW method uses higher-order vorticity elements to represent the wings and propeller blades as lifting surfaces. This method has a faster computational speed, numerical stability and realistic prediction than alternatives such as the Navier-Stokes equations, fixed wake panel method, relaxed wake method or the Vortex Lattice Method (VLM). It was originally developed in order to create a potential flow method which allowed for improved force resolution, better intrinsic computational stability while still keeping a simple geometric representation \cite{}. This method has also been shown to be suitable for lightly loaded propeller/proprotors and propeller-wing systems. The HOFW method is a higher-order, relaxed-wake potential flow method which imposes Neumann boundary conditions. It consists of a non-linear vorticity distribution along the transverse and streamwise edges of a singles Distributed Vortex Element (DVE). A single element is shown in figure \ref{fig:Votices}. The transverse vorticity axis uses a quadratic function to model the voticity distribution, wheras the streamwise axis uses a linear function. The simplicity allows for ease of calculation compared to alternative methods. 
+
+% \begin{figure}
+% \includegraphics[width=\linewidth]{04_Methodology/Figs/vortex.png}
+% \label{fig:Votices}
+% \caption{Visualation of a single distributed vorticity element}
+
+% \end{figure}
+
 
 
 \section{XFOIL}
