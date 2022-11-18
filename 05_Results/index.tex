@@ -167,7 +167,7 @@ The rolling coefficient for the tractor configuration when the propeller is run 
 
 
 \subsection{Static Margin}
-The static margin for all configurations shows that  For all airspeeds and propeller speeds tested the tractor configuration decreased the stability of the MAV with the exception of the 10m$s^{-1}$ at 6000RPM propeller speed. This is also seen more clearly in Table \ref{tab:staticMargin} as static margin decreases from -0.155 to -0.107 when comparing the no propeller and tractor configurations at 11000RPM and  10m$s^{-1}$. At 6000RPM propeller speed the tractor configuration became less stable when airspeed increased from 10m$s^{-1}$ to 20m$s^{-1}$, with the static margin decreasing from -0.116 to -0.106. This same trend was also seen for the pusher configuration at 6000RPM propeller speed, decreasing from -0.117 to -0.108. The opposite trend was seen when the propeller speed was increased to 11000RPM. The tractor and pusher configurations became more stable, increasing from -0.107 to -0.118 and from -0.156 to -0.173 respectively when  airspeed increased from 10m$s^{-1}$ to 20m$s^{-1}$. The no propeller configuration became more stable at all propeller speeds as the airspeed increased from 10m$s^{-1}$ to 20m$s^{-1}$.
+The static margin for all configurations shows that all airspeeds and propeller speeds were tested. The tractor configuration decreased the stability of the MAV except for the 10m$s^{-1}$ at 6000RPM propeller speed. This is also seen more clearly in Table \ref{tab:staticMargin} as static margin decreases from -0.155 to -0.107 when comparing the no propeller and tractor configurations at 11000RPM and  10m$s^{-1}$. At 6000RPM propeller speed, the tractor configuration became less stable when airspeed increased from 10m$s^{-1}$ to 20m$s^{-1}$, with the static margin decreasing from -0.116 to -0.106. This same trend was also seen for the pusher configuration at 6000RPM propeller speed, decreasing from -0.117 to -0.108. The opposite trend was seen when the propeller speed was increased to 11000RPM. The tractor and pusher configurations became more stable, increasing from -0.107 to -0.118 and from -0.156 to -0.173, respectively, when airspeed increased from 10m$s^{-1}$ to 20m$s^{-1}$. The no propeller configuration became more stable at all propeller speeds as the airspeed increased from 10m$s^{-1}$ to 20m$s^{-1}$.
 
 
 \begin{tabular}{ |c|c|c|c| }
@@ -225,7 +225,8 @@ No Propeller & 10 & 6000 & -0.100\\
 
 
 \section{VAP 3.5 Validation}
-Low speed aerodynamics generally see complex flow distributions and phenomena as dicussed in Sections \ref{sec:Reynolds} and \ref{sec:Reynolds2}. In order to evaluate the usage of VAP 3.5 for the wind tunnel tests conducted, a wing validation and model validation was performed with comparison to the GenMAV model which has been previously evaluated with the Athena Vortex Lattice (AVL) method in order to estimate the stability derivatives and moments of the GenMAV. 
+Low-speed aerodynamics generally see complex flow distributions and phenomena as discussed in Sections \ref{sec:Reynolds} and \ref{sec:Reynolds2}. In order to evaluate the usage of VAP 3.5 for the wind tunnel tests conducted, a wing validation and model validation was performed with comparison to the GenMAV model, which has been previously evaluated with the Athena Vortex Lattice (AVL) method in order to estimate the stability derivatives and moments of the GenMAV. 
+
 
 \subsection{Wing Validation}
 A wing validation against Fluent CFD results is given in Figures \ref{fig:wing0300} to Figure \ref{fig:001000b} \cite{}. This data was taken at a Reynolds number of 2.32 $\times 10^{5}$ at a freestream velocity of 20$m/s$ and density 1.225$kg/m^3$. 
@@ -359,297 +360,297 @@ A wing validation against Fluent CFD results is given in Figures \ref{fig:wing03
        
 % \end{figure}
 
-\subsection{Validation of Wind Tunnel Results with VAP 3.5}
-side forces and moments still in testing for VAP 3.5
+% \subsection{Validation of Wind Tunnel Results with VAP 3.5}
+% side forces and moments still in testing for VAP 3.5
 
-\subsubsection{No Propeller Configuration}
-
-
-\begin{figure}[H]
-    \centering
-    \begin{subfigure}[b]{0.467\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{05_Results/VAP/noProp/Cl/10ms_6000RPM_Cl.png}
-        \caption{Rolling Moment Coefficient at 10m/s airspeed and 6000RPM motor speed}
-        \label{fig:VAP_NoProp_Cl_10ms_6000}
-    \end{subfigure}
-    \begin{subfigure}[b]{0.467\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{05_Results/VAP/noProp/Cl/10ms_11000RPM_Cl.png}
-        \caption{Rolling Moment Coefficient at 10m/s airspeed and 11000RPM motor speed}
-        \label{fig:VAP_NoProp_Cl_10ms_11000}
-    \end{subfigure}
-    \begin{subfigure}[b]{0.467\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{05_Results/VAP/noProp/Cl/20ms_6000RPM_Cl.png}
-        \caption{Rolling Moment Coefficient at 20m/s airspeed and 6000RPM motor speed}
-        \label{fig:VAP_NoProp_Cl_20ms_6000}
-    \end{subfigure}
-    \begin{subfigure}[b]{0.467\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{05_Results/VAP/noProp/Cl/20ms_11000RPM_Cl.png}
-        \caption{Rolling Moment Coefficient at 20m/s airspeed and 11000RPM motor speed}
-        \label{fig:VAP_NoProp_Cl_20ms_11000}
-    \end{subfigure}
-\end{figure}
+% \subsubsection{No Propeller Configuration}
 
 
-\begin{figure}[H]
-    \centering
-    \begin{subfigure}[b]{0.467\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{05_Results/VAP/noProp/Cm/10ms_6000RPM_Cm.png}
-        \caption{Pitching Moment Coefficient at 10m/s airspeed and 6000RPM motor speed}
-        \label{fig:VAP_NoProp_Cm_10ms_6000}
-    \end{subfigure}
-    \begin{subfigure}[b]{0.467\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{05_Results/VAP/noProp/Cm/10ms_11000RPM_Cm.png}
-        \caption{Pitching Moment Coefficient at 10m/s airspeed and 11000RPM motor speed}
-        \label{fig:VAP_NoProp_Cm_10ms_11000}
-    \end{subfigure}
-    \begin{subfigure}[b]{0.467\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{05_Results/VAP/noProp/Cn/20ms_6000RPM_Cn.png}
-        \caption{Pitching Moment Coefficient at 20m/s airspeed and 6000RPM motor speed}
-        \label{fig:VAP_NoProp_Cm_20ms_6000}
-    \end{subfigure}
-    \begin{subfigure}[b]{0.467\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{05_Results/VAP/noProp/Cm/20ms_11000RPM_Cm.png}
-        \caption{Pitching Moment Coefficient at 20m/s airspeed and 11000RPM motor speed}
-        \label{fig:VAP_NoProp_Cm_20ms_11000}
-    \end{subfigure}
-\end{figure}
+% \begin{figure}[H]
+%     \centering
+%     \begin{subfigure}[b]{0.467\textwidth}
+%         \centering
+%         \includegraphics[width=\textwidth]{05_Results/VAP/noProp/Cl/10ms_6000RPM_Cl.png}
+%         \caption{Rolling Moment Coefficient at 10m/s airspeed and 6000RPM motor speed}
+%         \label{fig:VAP_NoProp_Cl_10ms_6000}
+%     \end{subfigure}
+%     \begin{subfigure}[b]{0.467\textwidth}
+%         \centering
+%         \includegraphics[width=\textwidth]{05_Results/VAP/noProp/Cl/10ms_11000RPM_Cl.png}
+%         \caption{Rolling Moment Coefficient at 10m/s airspeed and 11000RPM motor speed}
+%         \label{fig:VAP_NoProp_Cl_10ms_11000}
+%     \end{subfigure}
+%     \begin{subfigure}[b]{0.467\textwidth}
+%         \centering
+%         \includegraphics[width=\textwidth]{05_Results/VAP/noProp/Cl/20ms_6000RPM_Cl.png}
+%         \caption{Rolling Moment Coefficient at 20m/s airspeed and 6000RPM motor speed}
+%         \label{fig:VAP_NoProp_Cl_20ms_6000}
+%     \end{subfigure}
+%     \begin{subfigure}[b]{0.467\textwidth}
+%         \centering
+%         \includegraphics[width=\textwidth]{05_Results/VAP/noProp/Cl/20ms_11000RPM_Cl.png}
+%         \caption{Rolling Moment Coefficient at 20m/s airspeed and 11000RPM motor speed}
+%         \label{fig:VAP_NoProp_Cl_20ms_11000}
+%     \end{subfigure}
+% \end{figure}
 
 
-
-\begin{figure}[H]
-    \centering
-    \begin{subfigure}[b]{0.467\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{05_Results/VAP/noProp/Cn/10ms_6000RPM_Cn.png}
-        \caption{Yawing Moment Coefficient at 10m/s airspeed and 6000RPM motor speed}
-        \label{fig:VAP_noProp_Cm_10ms_6000}
-    \end{subfigure}
-    \begin{subfigure}[b]{0.467\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{05_Results/VAP/noProp/Cn/10ms_11000RPM_Cn.png}
-        \caption{Yawing Moment Coefficient at 10m/s airspeed and 11000RPM motor speed}
-        \label{fig:VAP_noProp_Cm_10ms_11000}
-    \end{subfigure}
-    \begin{subfigure}[b]{0.467\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{05_Results/VAP/noProp/Cn/20ms_6000RPM_Cn.png}
-        \caption{Yawing Moment Coefficient at 20m/s airspeed and 6000RPM motor speed}
-        \label{fig:VAP_noProp_Cm_20ms_6000}
-    \end{subfigure}
-    \begin{subfigure}[b]{0.467\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{05_Results/VAP/noProp/Cn/20ms_11000RPM_Cn.png}
-        \caption{Yawing Moment Coefficient at 20m/s airspeed and 11000RPM motor speed}
-        \label{fig:VAP_noProp_Cm_20ms_11000}
-    \end{subfigure}
-\end{figure}
+% \begin{figure}[H]
+%     \centering
+%     \begin{subfigure}[b]{0.467\textwidth}
+%         \centering
+%         \includegraphics[width=\textwidth]{05_Results/VAP/noProp/Cm/10ms_6000RPM_Cm.png}
+%         \caption{Pitching Moment Coefficient at 10m/s airspeed and 6000RPM motor speed}
+%         \label{fig:VAP_NoProp_Cm_10ms_6000}
+%     \end{subfigure}
+%     \begin{subfigure}[b]{0.467\textwidth}
+%         \centering
+%         \includegraphics[width=\textwidth]{05_Results/VAP/noProp/Cm/10ms_11000RPM_Cm.png}
+%         \caption{Pitching Moment Coefficient at 10m/s airspeed and 11000RPM motor speed}
+%         \label{fig:VAP_NoProp_Cm_10ms_11000}
+%     \end{subfigure}
+%     \begin{subfigure}[b]{0.467\textwidth}
+%         \centering
+%         \includegraphics[width=\textwidth]{05_Results/VAP/noProp/Cn/20ms_6000RPM_Cn.png}
+%         \caption{Pitching Moment Coefficient at 20m/s airspeed and 6000RPM motor speed}
+%         \label{fig:VAP_NoProp_Cm_20ms_6000}
+%     \end{subfigure}
+%     \begin{subfigure}[b]{0.467\textwidth}
+%         \centering
+%         \includegraphics[width=\textwidth]{05_Results/VAP/noProp/Cm/20ms_11000RPM_Cm.png}
+%         \caption{Pitching Moment Coefficient at 20m/s airspeed and 11000RPM motor speed}
+%         \label{fig:VAP_NoProp_Cm_20ms_11000}
+%     \end{subfigure}
+% \end{figure}
 
 
 
-\subsubsection{Tractor Configuration}
+% \begin{figure}[H]
+%     \centering
+%     \begin{subfigure}[b]{0.467\textwidth}
+%         \centering
+%         \includegraphics[width=\textwidth]{05_Results/VAP/noProp/Cn/10ms_6000RPM_Cn.png}
+%         \caption{Yawing Moment Coefficient at 10m/s airspeed and 6000RPM motor speed}
+%         \label{fig:VAP_noProp_Cm_10ms_6000}
+%     \end{subfigure}
+%     \begin{subfigure}[b]{0.467\textwidth}
+%         \centering
+%         \includegraphics[width=\textwidth]{05_Results/VAP/noProp/Cn/10ms_11000RPM_Cn.png}
+%         \caption{Yawing Moment Coefficient at 10m/s airspeed and 11000RPM motor speed}
+%         \label{fig:VAP_noProp_Cm_10ms_11000}
+%     \end{subfigure}
+%     \begin{subfigure}[b]{0.467\textwidth}
+%         \centering
+%         \includegraphics[width=\textwidth]{05_Results/VAP/noProp/Cn/20ms_6000RPM_Cn.png}
+%         \caption{Yawing Moment Coefficient at 20m/s airspeed and 6000RPM motor speed}
+%         \label{fig:VAP_noProp_Cm_20ms_6000}
+%     \end{subfigure}
+%     \begin{subfigure}[b]{0.467\textwidth}
+%         \centering
+%         \includegraphics[width=\textwidth]{05_Results/VAP/noProp/Cn/20ms_11000RPM_Cn.png}
+%         \caption{Yawing Moment Coefficient at 20m/s airspeed and 11000RPM motor speed}
+%         \label{fig:VAP_noProp_Cm_20ms_11000}
+%     \end{subfigure}
+% \end{figure}
 
 
 
-\begin{figure}[H]
-    \centering
-    \begin{subfigure}[b]{0.467\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{05_Results/VAP/tractor/Cl/10ms_6000RPM_Cl.png}
-        \caption{Rolling Moment Coefficient at 10m/s airspeed and 6000RPM motor speed}
-        \label{fig:VAP_Cl_10ms_6000}
-    \end{subfigure}
-    \begin{subfigure}[b]{0.467\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{05_Results/VAP/tractor/Cl/10ms_6000RPM_Cl.png}
-        \caption{Rolling Moment Coefficient at 10m/s airspeed and 11000RPM motor speed}
-        \label{fig:Missing2}
-    \end{subfigure}
-    \begin{subfigure}[b]{0.467\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{05_Results/VAP/tractor/Cl/20ms_6000RPM_Cl.png}
-        \caption{Rolling Moment Coefficient at 20m/s airspeed and 6000RPM motor speed}
-        \label{fig:VAP_Cl_20ms_6000}
-    \end{subfigure}
-    \begin{subfigure}[b]{0.467\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{05_Results/VAP/tractor/Cl/20ms_11000RPM_Cl.png}
-        \caption{Rolling Moment Coefficient at 20m/s airspeed and 11000RPM motor speed}
-        \label{fig:VAP_Cl_20ms_11000}
-    \end{subfigure}
-\end{figure}
-
-
-\begin{figure}[H]
-    \centering
-    \begin{subfigure}[b]{0.467\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{05_Results/VAP/tractor/Cm/10ms_6000RPM_Cm.png}
-        \caption{Pitching Moment Coefficient at 10m/s airspeed and 6000RPM motor speed}
-        \label{fig:VAP_Cm_10ms_6000}
-    \end{subfigure}
-    \begin{subfigure}[b]{0.467\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{05_Results/VAP/tractor/Cm/10ms_11000RPM_Cm.png}
-        \caption{Pitching Moment Coefficient at 10m/s airspeed and 11000RPM motor speed}
-        \label{fig:VAP_Cm_10ms_11000}
-    \end{subfigure}
-    \begin{subfigure}[b]{0.467\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{05_Results/VAP/tractor/Cm/20ms_6000RPM_Cm.png}
-        \caption{Pitching Moment Coefficient at 20m/s airspeed and 6000RPM motor speed}
-        \label{fig:VAP_Cm_20ms_6000}
-    \end{subfigure}
-    \begin{subfigure}[b]{0.467\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{05_Results/VAP/tractor/Cm/20ms_11000RPM_Cm.png}
-        \caption{Pitching Moment Coefficient at 20m/s airspeed and 11000RPM motor speed}
-        \label{fig:VAP_Cm_20ms_11000}
-    \end{subfigure}
-\end{figure}
+% \subsubsection{Tractor Configuration}
 
 
 
-\begin{figure}[H]
-    \centering
-    \begin{subfigure}[b]{0.467\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{05_Results/VAP/tractor/Cn/10ms_11000RPM_Cn.png}
-        \caption{Yawing Moment Coefficient at 10m/s airspeed and 6000RPM motor speed}
-        \label{fig:missing}
-    \end{subfigure}
-    \begin{subfigure}[b]{0.467\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{05_Results/VAP/tractor/Cn/10ms_11000RPM_Cn.png}
-        \caption{Yawing Moment Coefficient at 10m/s airspeed and 11000RPM motor speed}
-        \label{fig:VAP_tractor_10ms_11000}
-    \end{subfigure}
-    \begin{subfigure}[b]{0.467\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{05_Results/VAP/tractor/Cn/20ms_6000RPM_Cn.png}
-        \caption{Yawing Moment Coefficient at 20m/s airspeed and 6000RPM motor speed}
-        \label{fig:VAP_Cn_20ms_6000}
-    \end{subfigure}
-    \begin{subfigure}[b]{0.467\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{05_Results/VAP/tractor/Cn/20ms_11000RPM_Cn.png}
-        \caption{Yawing Moment Coefficient at 20m/s airspeed and 11000RPM motor speed}
-        \label{fig:VAP_Cn_20ms_11000}
-    \end{subfigure}
-\end{figure}
+% \begin{figure}[H]
+%     \centering
+%     \begin{subfigure}[b]{0.467\textwidth}
+%         \centering
+%         \includegraphics[width=\textwidth]{05_Results/VAP/tractor/Cl/10ms_6000RPM_Cl.png}
+%         \caption{Rolling Moment Coefficient at 10m/s airspeed and 6000RPM motor speed}
+%         \label{fig:VAP_Cl_10ms_6000}
+%     \end{subfigure}
+%     \begin{subfigure}[b]{0.467\textwidth}
+%         \centering
+%         \includegraphics[width=\textwidth]{05_Results/VAP/tractor/Cl/10ms_6000RPM_Cl.png}
+%         \caption{Rolling Moment Coefficient at 10m/s airspeed and 11000RPM motor speed}
+%         \label{fig:Missing2}
+%     \end{subfigure}
+%     \begin{subfigure}[b]{0.467\textwidth}
+%         \centering
+%         \includegraphics[width=\textwidth]{05_Results/VAP/tractor/Cl/20ms_6000RPM_Cl.png}
+%         \caption{Rolling Moment Coefficient at 20m/s airspeed and 6000RPM motor speed}
+%         \label{fig:VAP_Cl_20ms_6000}
+%     \end{subfigure}
+%     \begin{subfigure}[b]{0.467\textwidth}
+%         \centering
+%         \includegraphics[width=\textwidth]{05_Results/VAP/tractor/Cl/20ms_11000RPM_Cl.png}
+%         \caption{Rolling Moment Coefficient at 20m/s airspeed and 11000RPM motor speed}
+%         \label{fig:VAP_Cl_20ms_11000}
+%     \end{subfigure}
+% \end{figure}
 
 
-\subsubsection{Pusher Configuration}
-\begin{figure}[H]
-    \centering
-    \begin{subfigure}[b]{0.467\textwidth}
-      \centering
-        \includegraphics[width=\textwidth]{05_Results/Figs/VAP/fullyDevelopedWake.png}
-        \caption{}
-        \label{fig:TractorCofigurationWake}
-         \end{subfigure}
-          \begin{subfigure}[b]{0.467\textwidth}
-      \centering
-        \includegraphics[width=\textwidth]{05_Results/Figs/VAP/fullyDevelopedWake2.png}
-        \caption{}
-        \label{fig:TractorCofigurationWake2}
-         \end{subfigure}
-\end{figure}
-
-
-\begin{figure}[H]
-    \centering
-    \begin{subfigure}[b]{0.467\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{05_Results/VAP/pusher/Cl/10ms_6000RPM_Cl.png}
-        \caption{Rolling Moment Coefficient at 10m/s airspeed and 6000RPM motor speed}
-        \label{fig:VAP_pusher_Cl_10ms_6000}
-    \end{subfigure}
-    \begin{subfigure}[b]{0.467\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{05_Results/VAP/pusher/Cl/10ms_11000RPM_Cl.png}
-        \caption{Rolling Moment Coefficient at 10m/s airspeed and 11000RPM motor speed}
-        \label{fig:VAP_pusher_Cl_10ms_11000}
-    \end{subfigure}
-    \begin{subfigure}[b]{0.467\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{05_Results/VAP/pusher/Cl/20ms_6000RPM_Cl.png}
-        \caption{Rolling Moment Coefficient at 20m/s airspeed and 6000RPM motor speed}
-        \label{fig:VAP_psuher_Cl_20ms_6000}
-    \end{subfigure}
-    \begin{subfigure}[b]{0.467\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{05_Results/VAP/pusher/Cl/20ms_11000RPM_Cl.png}
-        \caption{Rolling Moment Coefficient at 20m/s airspeed and 11000RPM motor speed}
-        \label{fig:VAP_pusher_Cl_20ms_11000}
-    \end{subfigure}
-\end{figure}
-
-
-\begin{figure}[H]
-    \centering
-    \begin{subfigure}[b]{0.467\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{05_Results/VAP/pusher/Cm/10ms_6000RPM_Cm.png}
-        \caption{Pitching Moment Coefficient at 10m/s airspeed and 6000RPM motor speed}
-        \label{fig:VAP_pusher_Cm_10ms_6000}
-    \end{subfigure}
-    \begin{subfigure}[b]{0.467\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{05_Results/VAP/pusher/Cm/10ms_11000RPM_Cm.png}
-        \caption{Pitching Moment Coefficient at 10m/s airspeed and 11000RPM motor speed}
-        \label{fig:VAP_pusher_Cm_10ms_11000}
-    \end{subfigure}
-    \begin{subfigure}[b]{0.467\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{05_Results/VAP/pusher/Cm/20ms_6000RPM_Cm.png}
-        \caption{Pitching Moment Coefficient at 20m/s airspeed and 6000RPM motor speed}
-        \label{fig:VAP_pusher_Cm_20ms_6000}
-    \end{subfigure}
-    \begin{subfigure}[b]{0.467\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{05_Results/VAP/pusher/Cm/20ms_11000RPM_Cm.png}
-        \caption{Pitching Moment Coefficient at 20m/s airspeed and 11000RPM motor speed}
-        \label{fig:VAP_pusher_Cm_20ms_11000}
-    \end{subfigure}
-\end{figure}
+% \begin{figure}[H]
+%     \centering
+%     \begin{subfigure}[b]{0.467\textwidth}
+%         \centering
+%         \includegraphics[width=\textwidth]{05_Results/VAP/tractor/Cm/10ms_6000RPM_Cm.png}
+%         \caption{Pitching Moment Coefficient at 10m/s airspeed and 6000RPM motor speed}
+%         \label{fig:VAP_Cm_10ms_6000}
+%     \end{subfigure}
+%     \begin{subfigure}[b]{0.467\textwidth}
+%         \centering
+%         \includegraphics[width=\textwidth]{05_Results/VAP/tractor/Cm/10ms_11000RPM_Cm.png}
+%         \caption{Pitching Moment Coefficient at 10m/s airspeed and 11000RPM motor speed}
+%         \label{fig:VAP_Cm_10ms_11000}
+%     \end{subfigure}
+%     \begin{subfigure}[b]{0.467\textwidth}
+%         \centering
+%         \includegraphics[width=\textwidth]{05_Results/VAP/tractor/Cm/20ms_6000RPM_Cm.png}
+%         \caption{Pitching Moment Coefficient at 20m/s airspeed and 6000RPM motor speed}
+%         \label{fig:VAP_Cm_20ms_6000}
+%     \end{subfigure}
+%     \begin{subfigure}[b]{0.467\textwidth}
+%         \centering
+%         \includegraphics[width=\textwidth]{05_Results/VAP/tractor/Cm/20ms_11000RPM_Cm.png}
+%         \caption{Pitching Moment Coefficient at 20m/s airspeed and 11000RPM motor speed}
+%         \label{fig:VAP_Cm_20ms_11000}
+%     \end{subfigure}
+% \end{figure}
 
 
 
-\begin{figure}[H]
-    \centering
-    \begin{subfigure}[b]{0.467\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{05_Results/VAP/pusher/Cn/10ms_6000RPM_Cn.png}
-        \caption{Yawing Moment Coefficient at 10m/s airspeed and 6000RPM motor speed}
-        \label{fig:VAP_pusher_Cn_10ms_6000}
-    \end{subfigure}
-    \begin{subfigure}[b]{0.467\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{05_Results/VAP/pusher/Cn/10ms_11000RPM_Cn.png}
-        \caption{Yawing Moment Coefficient at 10m/s airspeed and 11000RPM motor speed}
-        \label{fig:VAP_pusherr_Cn_10ms_11000}
-    \end{subfigure}
-    \begin{subfigure}[b]{0.467\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{05_Results/VAP/pusher/Cn/20ms_6000RPM_Cn.png}
-        \caption{Yawing Moment Coefficient at 20m/s airspeed and 6000RPM motor speed}
-        \label{fig:VAP_pusher_Cn_20ms_6000}
-    \end{subfigure}
-    \begin{subfigure}[b]{0.467\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{05_Results/VAP/pusher/Cn/20ms_11000RPM_Cn.png}
-        \caption{Yawing Moment Coefficient at 20m/s airspeed and 11000RPM motor speed}
-        \label{fig:VAP_pusher_Cn_20ms_11000}
-    \end{subfigure}
-\end{figure}
+% \begin{figure}[H]
+%     \centering
+%     \begin{subfigure}[b]{0.467\textwidth}
+%         \centering
+%         \includegraphics[width=\textwidth]{05_Results/VAP/tractor/Cn/10ms_11000RPM_Cn.png}
+%         \caption{Yawing Moment Coefficient at 10m/s airspeed and 6000RPM motor speed}
+%         \label{fig:missing}
+%     \end{subfigure}
+%     \begin{subfigure}[b]{0.467\textwidth}
+%         \centering
+%         \includegraphics[width=\textwidth]{05_Results/VAP/tractor/Cn/10ms_11000RPM_Cn.png}
+%         \caption{Yawing Moment Coefficient at 10m/s airspeed and 11000RPM motor speed}
+%         \label{fig:VAP_tractor_10ms_11000}
+%     \end{subfigure}
+%     \begin{subfigure}[b]{0.467\textwidth}
+%         \centering
+%         \includegraphics[width=\textwidth]{05_Results/VAP/tractor/Cn/20ms_6000RPM_Cn.png}
+%         \caption{Yawing Moment Coefficient at 20m/s airspeed and 6000RPM motor speed}
+%         \label{fig:VAP_Cn_20ms_6000}
+%     \end{subfigure}
+%     \begin{subfigure}[b]{0.467\textwidth}
+%         \centering
+%         \includegraphics[width=\textwidth]{05_Results/VAP/tractor/Cn/20ms_11000RPM_Cn.png}
+%         \caption{Yawing Moment Coefficient at 20m/s airspeed and 11000RPM motor speed}
+%         \label{fig:VAP_Cn_20ms_11000}
+%     \end{subfigure}
+% \end{figure}
+
+
+% \subsubsection{Pusher Configuration}
+% \begin{figure}[H]
+%     \centering
+%     \begin{subfigure}[b]{0.467\textwidth}
+%       \centering
+%         \includegraphics[width=\textwidth]{05_Results/Figs/VAP/fullyDevelopedWake.png}
+%         \caption{}
+%         \label{fig:TractorCofigurationWake}
+%          \end{subfigure}
+%           \begin{subfigure}[b]{0.467\textwidth}
+%       \centering
+%         \includegraphics[width=\textwidth]{05_Results/Figs/VAP/fullyDevelopedWake2.png}
+%         \caption{}
+%         \label{fig:TractorCofigurationWake2}
+%          \end{subfigure}
+% \end{figure}
+
+
+% \begin{figure}[H]
+%     \centering
+%     \begin{subfigure}[b]{0.467\textwidth}
+%         \centering
+%         \includegraphics[width=\textwidth]{05_Results/VAP/pusher/Cl/10ms_6000RPM_Cl.png}
+%         \caption{Rolling Moment Coefficient at 10m/s airspeed and 6000RPM motor speed}
+%         \label{fig:VAP_pusher_Cl_10ms_6000}
+%     \end{subfigure}
+%     \begin{subfigure}[b]{0.467\textwidth}
+%         \centering
+%         \includegraphics[width=\textwidth]{05_Results/VAP/pusher/Cl/10ms_11000RPM_Cl.png}
+%         \caption{Rolling Moment Coefficient at 10m/s airspeed and 11000RPM motor speed}
+%         \label{fig:VAP_pusher_Cl_10ms_11000}
+%     \end{subfigure}
+%     \begin{subfigure}[b]{0.467\textwidth}
+%         \centering
+%         \includegraphics[width=\textwidth]{05_Results/VAP/pusher/Cl/20ms_6000RPM_Cl.png}
+%         \caption{Rolling Moment Coefficient at 20m/s airspeed and 6000RPM motor speed}
+%         \label{fig:VAP_psuher_Cl_20ms_6000}
+%     \end{subfigure}
+%     \begin{subfigure}[b]{0.467\textwidth}
+%         \centering
+%         \includegraphics[width=\textwidth]{05_Results/VAP/pusher/Cl/20ms_11000RPM_Cl.png}
+%         \caption{Rolling Moment Coefficient at 20m/s airspeed and 11000RPM motor speed}
+%         \label{fig:VAP_pusher_Cl_20ms_11000}
+%     \end{subfigure}
+% \end{figure}
+
+
+% \begin{figure}[H]
+%     \centering
+%     \begin{subfigure}[b]{0.467\textwidth}
+%         \centering
+%         \includegraphics[width=\textwidth]{05_Results/VAP/pusher/Cm/10ms_6000RPM_Cm.png}
+%         \caption{Pitching Moment Coefficient at 10m/s airspeed and 6000RPM motor speed}
+%         \label{fig:VAP_pusher_Cm_10ms_6000}
+%     \end{subfigure}
+%     \begin{subfigure}[b]{0.467\textwidth}
+%         \centering
+%         \includegraphics[width=\textwidth]{05_Results/VAP/pusher/Cm/10ms_11000RPM_Cm.png}
+%         \caption{Pitching Moment Coefficient at 10m/s airspeed and 11000RPM motor speed}
+%         \label{fig:VAP_pusher_Cm_10ms_11000}
+%     \end{subfigure}
+%     \begin{subfigure}[b]{0.467\textwidth}
+%         \centering
+%         \includegraphics[width=\textwidth]{05_Results/VAP/pusher/Cm/20ms_6000RPM_Cm.png}
+%         \caption{Pitching Moment Coefficient at 20m/s airspeed and 6000RPM motor speed}
+%         \label{fig:VAP_pusher_Cm_20ms_6000}
+%     \end{subfigure}
+%     \begin{subfigure}[b]{0.467\textwidth}
+%         \centering
+%         \includegraphics[width=\textwidth]{05_Results/VAP/pusher/Cm/20ms_11000RPM_Cm.png}
+%         \caption{Pitching Moment Coefficient at 20m/s airspeed and 11000RPM motor speed}
+%         \label{fig:VAP_pusher_Cm_20ms_11000}
+%     \end{subfigure}
+% \end{figure}
+
+
+
+% \begin{figure}[H]
+%     \centering
+%     \begin{subfigure}[b]{0.467\textwidth}
+%         \centering
+%         \includegraphics[width=\textwidth]{05_Results/VAP/pusher/Cn/10ms_6000RPM_Cn.png}
+%         \caption{Yawing Moment Coefficient at 10m/s airspeed and 6000RPM motor speed}
+%         \label{fig:VAP_pusher_Cn_10ms_6000}
+%     \end{subfigure}
+%     \begin{subfigure}[b]{0.467\textwidth}
+%         \centering
+%         \includegraphics[width=\textwidth]{05_Results/VAP/pusher/Cn/10ms_11000RPM_Cn.png}
+%         \caption{Yawing Moment Coefficient at 10m/s airspeed and 11000RPM motor speed}
+%         \label{fig:VAP_pusherr_Cn_10ms_11000}
+%     \end{subfigure}
+%     \begin{subfigure}[b]{0.467\textwidth}
+%         \centering
+%         \includegraphics[width=\textwidth]{05_Results/VAP/pusher/Cn/20ms_6000RPM_Cn.png}
+%         \caption{Yawing Moment Coefficient at 20m/s airspeed and 6000RPM motor speed}
+%         \label{fig:VAP_pusher_Cn_20ms_6000}
+%     \end{subfigure}
+%     \begin{subfigure}[b]{0.467\textwidth}
+%         \centering
+%         \includegraphics[width=\textwidth]{05_Results/VAP/pusher/Cn/20ms_11000RPM_Cn.png}
+%         \caption{Yawing Moment Coefficient at 20m/s airspeed and 11000RPM motor speed}
+%         \label{fig:VAP_pusher_Cn_20ms_11000}
+%     \end{subfigure}
+% \end{figure}
 
 
 \section{Discussion}
