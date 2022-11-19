@@ -1,25 +1,15 @@
 \graphicspath{{./Figs/}}
 
 \chapter{Theory and Methodology}
-This chapter outlines the theory and methodology used to create, test and collect the data required for the wing-propeller interaction analysis. It covers the development of the MAV model for testing from python scripts and FreeCAD to the final testing completed in a 3x4ft wind tunnel to collect the force and moment data of the model. The software used to validate these results is also explained in this chapter. 
+This chapter outlines the theory and methodology used to create, test and collect the data required for the wing-propeller interaction analysis. It covers the development of the \acrshort{MAV} model for testing from python scripts and FreeCAD to the final testing completed in a 3x4ft wind tunnel to collect the force and moment data of the model. The software used to validate these results is also explained in this chapter. 
 
 \section{Material Choice}
-To readily edit and modify the model to be tested, 3D printing was used to print the final developed model. 3D printing has become increasingly common when developing models testing in wind tunnels \cite{Szwedziak2022}. Polylactic acid (PLA) filament was used to print the main body of the model as this is the most widely used and available filament for 3D printing purposes. PLA has a low melting point of $\approx$ 150 $^{\circ}$, good layer adhesion and structural strength. PLA can also be extruded in various ways to develop different textures on the surface of the 3D model \cite{Butt2021}. This is particularly significant for MAVs as aircraft surfaces are typically smooth to reduce viscous drag effects. 3D printed models may have thin ridges between layers when printed. However, the extrusion rate, nozzle size, temperature, and bed temperature can all be set to mitigate this issue as much as possible \cite{Butt2021} \cite{Olasek2014}. However, a lightweight PLA was used for the wings and tail to print a smoother surface. This is particularly important for the wings and tail as these are the main surfaces that provide lift for the aircraft. Using a lightweight PLA, the structure allows for some bending, as seen in typical wing shapes, rather than printing with standard PLA to produce a rigid structure. 
+To readily edit and modify the model to be tested, 3D printing was used to print the final developed model. 3D printing has become increasingly common when developing models testing in wind tunnels \cite{Szwedziak2022}. Polylactic acid (\acrshort{PLA}) filament was used to print the main body of the model as this is the most widely used and available filament for 3D printing purposes. \acrshort{PLA} has a low melting point of $\approx$ 150 $^{\circ}$, good layer adhesion and structural strength. \acrshort{PLA} can also be extruded in various ways to develop different textures on the surface of the 3D model \cite{Butt2021}. This is particularly significant for \acrshort{MAV}s as aircraft surfaces are typically smooth to reduce viscous drag effects. 3D printed models may have thin ridges between layers when printed. However, the extrusion rate, nozzle size, temperature, and bed temperature can all be set to mitigate this issue as much as possible \cite{Butt2021} \cite{Olasek2014}. However, a lightweight \acrshort{PLA} was used for the wings and tail to print a smoother surface. This is particularly important for the wings and tail as these are the main surfaces that provide lift for the aircraft. Using a lightweight \acrshort{PLA}, the structure allows for some bending, as seen in typical wing shapes, rather than printing with standard \acrshort{PLA} to produce a rigid structure. 
 
 
 \section{FreeCAD}
-FreeCAD is a 3D parametric modeller and was used with python scripts provided by Dries Verstraete to produce fuselage, wing and tail shapes when given input parameters to define the shape and geometry. Various model shapes were produced to make the model 3D printable to allow for easy manufacturing and testing. Several design constraints had to be considered when developing the model due to the structural strength of the PLA used for 3D printing and the limitations. The wings and tail could be slightly bigger to print the aerofoil shape accurately.\\
-\\ The TL54 airfoil was used for the main wings due to this airfoil having a high lift coefficient and low pitching moment. The model's dimensions are also given in Figure \ref{fig:dimension22}.
+FreeCAD is a 3D parametric modeller and was used with python scripts provided by Dries Verstraete to produce fuselage, wing and tail shapes when given input parameters to define the shape and geometry. Various model shapes were produced to make the model 3D printable and allow for easy manufacturing and testing. Several design constraints had to be considered due to the structural strength of the PLA used for 3D printing and size limitations. The wings and tail in particular had to be large enough to print the aerofoil shape accurately.  The TL54 airfoil was used for the main wings due to this airfoil having a high lift coefficient and low pitching moment. The model's dimensions are also given in Figure \ref{fig:dimension22}. The model shown in Figure \ref{fig:freeCADModel} was also fitted to mount into the 3x4ft wind tunnel for testing as shown in Figure \ref{fig:modelWithTunnel}.
 
-\begin{figure}
-    \centering
-    \includegraphics{04_Methodology/Figs/dimensions.JPG}
-    
-    \caption{Dimensions of the final MAV model in millimeters}
-    \label{fig:dimension22}
-\end{figure}
-
-The model shown in Figure \ref{fig:freeCADModel} was also fitted to mount into the 3x4ft wind tunnel for testing as shown in Figure \ref{fig:modelWithTunnel}.
 
 \begin{figure}[H]
 \centering
@@ -31,19 +21,31 @@ The model shown in Figure \ref{fig:freeCADModel} was also fitted to mount into t
 
 \begin{figure}
     \centering
+    \includegraphics{04_Methodology/Figs/dimensions.JPG}
+    
+    \caption{Dimensions of the final \acrshort{MAV} model in millimeters}
+    \label{fig:dimension22}
+\end{figure}
+
+
+
+
+
+\begin{figure}
+    \centering
     \includegraphics{04_Methodology/Figs/ModelWithtunnel.JPG}
     \caption{FreeCAD model mounted in Wing tunnel }
     \label{fig:modelWithTunnel}
 \end{figure}
 
-The model size was also chosen to reduce the blockage experienced when using the model during wind tunnel testing. The blockage varied from 4.9\% to 8.7\% for an angle of attack range from -5$^\circ$ to 15$^\circ$. The wing span was also limited in size to ensure that wind tunnel interference would not influence the results. 
+The model size was chosen to reduce the blockage experienced when using the model during wind tunnel testing. The blockage varied from 4.9\% to 8.7\% for an angle of attack range from -5$^\circ$ to 15$^\circ$. The wing span was also limited in size to ensure that wind tunnel interference would not influence the results. 
 
 
 
 \section{VAP 3.5}
-VAP 3.5 is open-source software that uses the High-Order Free Wake (\acrshort{HOFW}) method to determine the aerodynamic performance of MAV designs. \\
+VAP 3.5 is open-source software that uses the High-Order Free Wake (\acrshort{HOFW}) method to determine the aerodynamic performance of \acrshort{MAV} designs. \\
 
-The software is used by first defining the flight conditions and geometry of the model to be tested. This includes setting the duration of the simulation to ensure that the wake from the propeller and wing have interacted and fully developed. The VAP 3.5 model is then generated and run through the potential flow method used by the VAP software. This is used to determine the aerodynamics of the MAV design to be tested. The weight and CG location of the model as determined based on the MAV geometry or explicitly defined in the code used to generate the model. The stability derivatives can be determined based on the CG location and the lift distribution determined in the VAP potential flow method. A flowchart is given in Figure \ref{fig:flowchart} to outline this process.
+The software is used by first defining the flight conditions and geometry of the model to be tested. This includes setting the duration of the simulation to ensure that the wake from the propeller and wing have interacted and fully developed. The VAP 3.5 model is then generated and run through the potential flow method used by the VAP 3.5 software. This is used to determine the aerodynamics of the \acrshort{MAV} design to be tested. The weight and \acrshort{CG} location of the model as determined based on the \acrshort{MAV} geometry or explicitly defined in the code used to generate the model. The stability derivatives can be determined based on the \acrshort{CG} location and the lift distribution determined in the VAP 3.5 potential flow method. A flowchart is given in Figure \ref{fig:flowchart} to outline this process.
 
  
  \begin{figure}[!ht]
@@ -98,7 +100,8 @@ Where n is the number of spanwise panels, m is the number of lifting lines, $\et
 
 
 \section{XFOIL}
-XFOIL is another open-source, free-to-use software developed by Harold Youngren and Mark Drela. The software is used to analyse 2D airfoils for their aerodynamic characteristics. XFOIL was used to produce aerofoil data which accounted for viscous effects. The software account for the viscous effects as this must have an essential role in the flow characteristics across the surface of an aircraft wing. XFOIL accounts for the viscous effects, particularly seen at lower Reynolds numbers, by using the wake momentum thickness to determine the skin friction produced as the fluid passes over the airfoil surface as given by Equation \ref{eqn:XFOIL}. 
+XFOIL, developed by Harold Youngren and Mark Drela was used to analyse 2D airfoils for their aerodynamic characteristics. XFOIL was used to produce aerofoil data which accounted for viscous effects.  Viscous effects have an essential role in the flow characteristics across the surface of an aircraft wing. This is particularly important at lower Reynolds numbers. Xfoil uses the wake momentum thickness to determine the skin friction produced as the fluid passes over the airfoil surface as given by Equation \ref{eqn:XFOIL}. In this manner the skin friction losses can be determined and accounted for when running the VAP 3.5 software to analyse the stability of the model. 
+
 
 
 \begin{equation}
@@ -113,10 +116,9 @@ Where:
     \item u is the flow velocity at a position y distance from the airfoil surface
 \end{itemize}
 
-In this manner the skin friction losses can be determined and accounted for when running the VAP software to analyse the stability of the model. 
 
 \section{Wind Tunnel Testing}
-To analyse the stability of the final developed model in the three configurations, the model was mounted in the wind tunnel to determine the forces and moments acting at several conditions to assess the effect that adding a propeller has on the stability of the model. Wind tunnel tests were taken for variations of \acrshort{AoA}, airspeed, propeller speed and configuration. These are outlined below
+To analyse the stability of the final developed model, the model was mounted in the 3x4 ft wind tunnel to determine the forces and moments acting at several conditions to assess the effect that adding a propeller has on the stability of the model. Wind tunnel tests were taken for variations of \acrshort{AoA}, airspeed, propeller speed and configuration. These are outlined below
 
 \begin{itemize}
     \item \acrshort{AoA}: -5 $^{\circ}$ to 15 $^{\circ}$ in increments of 2$^{\circ}$
@@ -151,16 +153,16 @@ A safety net was placed in the wind tunnel in case parts of the model could not 
 
 \begin{figure}[H]
      \centering
-     \begin{subfigure}[b]{0.45\textwidth}
+     \begin{subfigure}[b]{0.4\textwidth}
              \centering
-            \includegraphics[scale =0.05]{04_Methodology/Figs/windTunnelNet.jpg}
+            \includegraphics[scale =0.04]{04_Methodology/Figs/windTunnelNet.jpg}
             \caption{Safety net to prevent any model parts from damaging the wind tunnel if the mount were to disconnect}
             \label{fig:windTunnelNet}
      \end{subfigure}
      \hfill
-     \begin{subfigure}[b]{0.45\textwidth}
+     \begin{subfigure}[b]{0.4\textwidth}
                 \centering
-                \includegraphics[scale=0.05]{04_Methodology/Figs/cooler.jpg}
+                \includegraphics[scale=0.04]{04_Methodology/Figs/cooler.jpg}
                 \caption{Cooler for wind tunnel motor}
                 \label{fig:engineCooler}
      \end{subfigure}
@@ -260,14 +262,11 @@ The wind tunnel was then calibrated for wind speed, atmospheric conditions and a
 \end{figure}
 
 
-When using the prop, the motor was supplied with a 7.4V battery, and the RPM was set to $\approx 6000 RPM$, $\approx 9000RPM$ and $\approx 11000 RPM$. The bias at each airspeed tested was first calculated to determine the change in forces and moments across the angles of attack tested. Following this, an angle of attack sweep from -5$^{\circ}$ to 15$^{\circ}$ was undertaken for the given airspeed. For each velocity, the bias was recalculated. From the force and moment data collected, the main stability coefficients for the MAV model could be determined.
+When using the prop, the motor was supplied with a 7.4V battery, and the RPM was set to $\approx 6000 RPM$, $\approx 9000RPM$ and $\approx 11000 RPM$. The bias at each airspeed tested was first calculated to determine the change in forces and moments across the angles of attack tested. Following this, an \acrshort{AoA} sweep from -5$^{\circ}$ to 15$^{\circ}$ was undertaken for each airspeed analysed. For each velocity, the bias was recalculated. From the force and moment data collected, the main stability coefficients for the \acrshort{MAV} model could be determined.
 
 
 \section{Stability Calculation}
-To determine the stability of the model in all the tested configurations, the stability derivatives of the model had to be determined. Data from the nano 25 load cell was used to determine the loads and moments acting on the model about the mounting point. These values were transferred to the neutral point of the model at 20$\overline{c}$. The aerodynamic coefficients were determined using equations \ref{eqn:lift} to \ref{eqn:drag}, and the moment coefficients about the pitch, yaw and roll axis were calculated using Equations \ref{eqn:pitching} to \ref{eqn:sideslip}. 
+To determine the stability in all the tested configurations, the stability derivatives of the model had to be determined. Data from the nano25 load cell was used to determine the loads and moments acting on the model about the mounting point. These values were transferred to the neutral point of the model at 20$\overline{c}$. The aerodynamic coefficients were determined using equations \ref{eqn:lift} to \ref{eqn:drag}, and the moment coefficients about the pitch, yaw and roll axis were calculated using Equations \ref{eqn:pitching} to \ref{eqn:sideslip}. 
 
-
-\todo{Wasted space?!}
-
-\todo{Add component list for MAV model in Wind Tunnel}
+%\todo{Add component list for MAV model in Wind Tunnel}
 

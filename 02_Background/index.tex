@@ -25,7 +25,9 @@ The chord is the distance between the leading and trailing edge of the wings sho
 \begin{itemize}
     \item \textbf{Root Chord (denoted \acrshort{$c_r$}):} This is the chord length where the wing meets the fuselage and is generally the position where the chord length is the longest. 
     \item \textbf{Tip Chord (denoted \acrshort{$c_t$}):} The tip chord is the chord length at the tips of the wings 
-    \item \textbf{Mean Aerodynamic Chord (\acrshort{MAC}):} The mean aerodynamic chord is used to represent the wing in only two dimensions. The \acrshort{MAC} is the chord length at which the resultant aerodynamic force acts. The \acrshort{MAC} is defined by Equation \ref{eqn:MAC} and is taken from wing tip to wing tip. In the case of a straight tapered wing with a taper ratio (\acrshort{lambda}), the \acrshort{MAC} equation can be simplified to Equation \ref{eqn:MACSimplified}.
+    \item \textbf{Mean Aerodynamic Chord (\acrshort{MAC}):} The mean aerodynamic chord is used to represent the wing in only two dimensions. The \acrshort{MAC} is the chord length at which the resultant aerodynamic force acts. The \acrshort{MAC} is defined by Equation \ref{eqn:MAC} and is taken from wing tip to wing tip. 
+    
+    %In the case of a straight tapered wing with a taper ratio (\acrshort{lambda}), the \acrshort{MAC} equation can be simplified to Equation \ref{eqn:MACSimplified}.
     
 \end{itemize} 
 
@@ -34,22 +36,24 @@ The chord is the distance between the leading and trailing edge of the wings sho
     \label{eqn:MAC}
 \end{equation}
 
-\begin{equation}
-    \bar{c} =  \frac{ 2c_r(1 + \lambda + \lambda^2)}{3(1 + \lambda)}
-    \label{eqn:MACSimplified}
-\end{equation}
+% \begin{equation}
+%     \bar{c} =  \frac{ 2c_r(1 + \lambda + \lambda^2)}{3(1 + \lambda)}
+%     \label{eqn:MACSimplified}
+% \end{equation}
 
- The taper ratio defines the ratio between the root and tip chord lengths. The taper ratio is given by Equation \ref{eqn:taper}.
+ Taper ratio is the ratio between the root and tip chord lengths given by Equation \ref{eqn:taper}.
  
  \begin{equation}
      \lambda = \frac{c_t}{c_r}
      \label{eqn:taper}
  \end{equation}
  
- The taper ratio is significant as it influences the lift distribution over the wing. By reducing the wing area towards the wing tips, the moment produced by the wings is also reduced. 
+ The taper ratio is significant as it influences the lift distribution over the wing. Reducing the wing area towards the wing tips, reduces the moment produced by the wings.
  
 \section{Sweep}
-The sweep is the angle (\acrshort{Lambda}) between the $y_b$ axis and the leading edge. When wings are swept back, the flow is directed outwards along the length of the wing. This also changes the angle of attack towards the wings' tips. A negative sweep angle (generally only seen on experimental aircraft) directs the flow inboard towards the fuselage. Sweep is also used to assist with static longitudinal stability. A positive sweep angle will move the aircraft's aerodynamic center backwards and vice versa. The sweep angle (\acrshort{Lambda}) can be used to fine-tune the pitch stability. Sweep is also used to delay shock wave formation on wings. In this phenomenon, at high Mach numbers ($>$ 0.8), a sharp discontinuity of pressure is seen in a narrow region travelling through a medium. 
+The sweep is the angle (\acrshort{Lambda}) between the $y_b$ axis and the leading edge. When wings are swept back, the flow is directed outwards along the length of the wing. This also changes the angle of attack towards the wings' tips. A negative sweep angle (generally only seen on experimental aircraft) directs the flow inboard towards the fuselage. Sweep is also used to assist with static longitudinal stability. A positive sweep angle will move the aircraft's aerodynamic center backwards and vice versa. The sweep angle (\acrshort{Lambda}) can be used to fine-tune the pitch stability. Sweep is also used to delay shock wave formation on wings.
+
+%In this phenomenon, at high Mach numbers ($>$ 0.8), a sharp discontinuity of pressure is seen in a narrow region travelling through a medium. 
 
 
 
@@ -59,7 +63,7 @@ The dihedral angle (\acrshort{gamma}) is the angle between the wing and the $y_b
 \begin{figure}[H]
 % \hspace*{-1.3in}
   \centering
-   \includegraphics[width=1\linewidth]{03_LiteratureReview/Figs/dihedral.jpg}
+   \includegraphics[width=0.6\linewidth]{03_LiteratureReview/Figs/dihedral.jpg}
   \caption{Wing dihedral and anhedral example. Image source: \cite{moreplane}}
   \label{fig:dihedral}
 \end{figure}
@@ -73,13 +77,13 @@ The wing twist is often used to redistribute the lift along the wing's surface. 
 \begin{figure}[H]
 % \hspace*{-1.3in}
   \centering
-  \includegraphics[width=1\linewidth]{02_Background/Figs/wingo.JPG}
+  \includegraphics[width=0.8\linewidth]{02_Background/Figs/wingo.JPG}
   \caption{Wing twist and incidence angle}
   \label{fig:twist}
 \end{figure}
 
 \section{Aspect Ratio}
-The aspect ratio (\acrshort{AR}) is significant when considering an aircraft's aerodynamic efficiency. First, the wing area (\acrshort{S}) must be introduced. The AR can be calculated through Equation \ref{eqn:Aspect}.
+The aspect ratio (\acrshort{AR}) is significant when considering an aircraft's aerodynamic efficiency. First, the wing area (\acrshort{S}) must be introduced. The \acrshort{AR} can be calculated through Equation \ref{eqn:Aspect}.
 
 \begin{equation}
     AR = \frac{b^2}{S}
@@ -109,7 +113,7 @@ The primary reference frames used to describe the position of an aircraft are:
     \item Stability Axes
     \item Air Axes
 \end{itemize}
-\todo{Up to here with adding acronyms}
+
 Figure \ref{fig:refernce} provides a visualisation to assist with the following explanations.
 
 \begin{figure}[H]
@@ -120,40 +124,40 @@ Figure \ref{fig:refernce} provides a visualisation to assist with the following 
   \label{fig:refernce}
 \end{figure}
 
-\section{Earth Centered Axes: denoted as \texorpdfstring{($x_e$, $y_e$, $z_e$)}{L}}
+\subsection{Earth Centered Axes: denoted as \texorpdfstring{($x_e$, $y_e$, $z_e$)}{L}}
 The Earth centered axes is a global reference frame with the centre of the Earth's origin. From the Earth's centre, three orthogonal axes remain fixed to the Earth. This axis is primarily used when describing the position of aircraft. Further visualisation of this reference frame is shown in Figure \ref{fig:refernceEarth}. As Earth has an ellipsoid shape (rather than a sphere), the position is described in terms of the latitude ($\phi$), longitude ($\lambda$), and altitude (h).
 
 \begin{figure}[H]
 % \hspace*{-1.3in}
   \centering
-  \includegraphics[width=0.7\linewidth]{03_LiteratureReview/Figs/ref_ecef.jpg}
+  \includegraphics[width=0.6\linewidth]{03_LiteratureReview/Figs/ref_ecef.jpg}
   \caption{Earth centered axes \cite{VectorNAV}}
   \label{fig:refernceEarth}
 \end{figure}
 
-\section{LVLH Axes: denoted as \texorpdfstring{($x_v$, $y_v$, $z_v$)}{L}}
+\subsection{LVLH Axes: denoted as \texorpdfstring{($x_v$, $y_v$, $z_v$)}{L}}
  This axis frame translates with the aircraft and is aligned with the Earth axes previously described. It is shown in Figure \ref{fig:refernce}.
 
-\section{Body Axes: denoted as \texorpdfstring{($x_b$, $y_b$, $z_b$)}{L}} 
+\subsection{Body Axes: denoted as \texorpdfstring{($x_b$, $y_b$, $z_b$)}{L}} 
 This axis is positioned at the aircraft's centre of gravity. Figure \ref{fig:refernce} shows this position in the aircraft's centre. The body axes translate with the aircraft and are highlighted in orange in Figure \ref{fig:refernce}.
 
-\section{Stability Axes: denoted as \texorpdfstring{($x_s$, $y_s$, $z_s$)}{L}} 
+\subsection{Stability Axes: denoted as \texorpdfstring{($x_s$, $y_s$, $z_s$)}{L}} 
 The stability axis has its origin at the centre of gravity, shown in Figure \ref{fig:refernce}. It translates with the aircraft's movement. $x_s$ aligns with the air path and is described as an offset from $x_b$ by an angle of $\alpha$ (further described in \ref{subsubsec:keyparam}). $y_s$ is aligned with the body axes $y_b$ and $z_s$ acts perpendicular to both $x_s$ and $y_s$.
 
 
-\section{Air Path Axes: denoted as \texorpdfstring{($x_a$, $y_a$, $z_a$)}{L}}
-The air path axis has its origin at the centre of gravity. $x_a$ is aligned with the relative air path and is offset from $x_b$ by the angle of attack ($\alpha$). $y_a$ is also aligned with the relative air path and is offset from the $y_b$ by the sideslip angle ($\beta$). $z_a$ is perpendicular to both $x_a$ and $y_a$. 
+\subsection{Air Path Axes: denoted as \texorpdfstring{($x_a$, $y_a$, $z_a$)}{L}}
+The air path axis has its origin at the centre of gravity. $x_a$ and  $y_a$ are aligned with the relative air path and is offset from $x_b$ by the angle of attack ($\alpha$) and $y_b$ by the sideslip angle ($\beta$) respectively. $z_a$ is perpendicular to both $x_a$ and $y_a$. 
 
 \section{Key Parameters}
 \label{subsubsec:keyparam}
 Some key parameters are used to define the motion of the aircraft. These are explained below: 
 \begin{itemize}
     \item \textbf{Aerodynamic Angles ($\alpha, \beta$):} These angles are used to describe the offset of the aircraft's body axes to the relative air path. $\alpha$ is also known as the angle of attack and describes the angle between the $x_a$ and $x_b$ positions. $\beta$ is also known as the side slip angle and describes the angle between the $y_a$ and $y_b$ positions. These angles are also shown in Figure \ref{fig:refernce}.
-    \item \textbf{Euler Angles ($\theta_a, \phi_a, \psi_a $):} The Euler angles are used to describe the orientation of rigid bodies with respect to a fixed coordinate system. In the case of aircraft, this describes the pitch ($\theta_a$), yaw ($\psi_a$) and roll ($\phi_a$). These angles are relative to the LVLH reference frame. These can be seen in Figure \ref{fig:refernce}.
+    \item \textbf{Euler Angles ($\theta_a, \phi_a, \psi_a $):} The Euler angles are used to describe the orientation of rigid bodies with respect to a fixed coordinate system. In the case of aircraft, this describes the pitch ($\theta_a$), yaw ($\psi_a$) and roll ($\phi_a$). These angles are relative to the \acrshort{LVLH} reference frame. These can be seen in Figure \ref{fig:refernce}.
 \end{itemize}
 
 \section{Aerodynamic Forces and Coefficients}
-Airfoils which are designed to produce lift, achieve this by creating a  pressure difference between the upper and lower surface when moving through a fluid. This lift force acts perpendicular to the chord line and is shown in Figure \ref{fig:pressureWing}.
+Airfoils produce lift due to a pressure difference between the upper and lower surface in a moving fluid. This lift force acts perpendicular to the chord line shown in Figure \ref{fig:pressureWing}.
 
 
 
@@ -162,25 +166,25 @@ Airfoils which are designed to produce lift, achieve this by creating a  pressur
      \begin{subfigure}[b]{0.45\textwidth}
          \centering
          \includegraphics[width=\textwidth]{02_Background/Figs/smol.JPG}
-         \caption{Low angle of attack}
+         \caption{Low \acrshort{AoA}}
          \label{fig:Press2a}
      \end{subfigure}
      \hfill
      \begin{subfigure}[b]{0.45\textwidth}
          \centering
          \includegraphics[width=\textwidth]{02_Background/Figs/big.JPG}
-         \caption{High angle of attack}
+         \caption{High \acrshort{AoA}}
          \label{fig:Press2b}
      \end{subfigure}
      \hfill
-        \caption{Pressure distribution over a wing }
+        \caption{Pressure distribution over a wing}
         \label{fig:pressureWing}
 \end{figure}
 
 
 
-To simplify calculations regarding this force distribution, the aerodynamic centre is used. The wing's aerodynamic centre is the wing's position where when the net force is applied, the total moment created with respect to the angle of attack remains constant. Through these simplifications, the total force acts through a single point - the aerodynamic centre. The main forces which act on the wing are lift and drag. Lift (L) is the force acting normally on the air path axes ($z_a$). Drag (D) is the force that acts both in the $x_a$, air path axis and long the aircraft surface due to air friction. The main components for the aerodynamic forces and coefficients are the wing, tail and fuselage. The main forces are also shown in Figure \ref{fig:aeroforces}.
-
+To simplify calculations the aerodynamic centre is used. The wing's aerodynamic centre is the wing's position where when the net force is applied, and the total moment created with respect to the angle of attack remains constant. The total force acts through the aerodynamic centre. The main forces which act on the wing are lift and drag. Lift (L) is the force acting normally on the air path axes ($z_a$). Drag (D) is the force that acts both in the $x_a$, air path axis and along the aircraft surface due to air friction. The main forces are also shown in Figure \ref{fig:aeroforces}.
+Two significant aerodynamic coefficients are used as the lift and drag force coefficients shown in Equations \ref{eqn:lift} and \ref{eqn:drag}. These coefficients are the lift and drag forces normalised by the dynamic pressure (\acrshort{q}) and the wing area (\acrshort{S}). 
 
 
 \begin{figure}[H]
@@ -190,7 +194,7 @@ To simplify calculations regarding this force distribution, the aerodynamic cent
   \caption{Aerodynamic forces acting on \acrshort{MAV}}
   \label{fig:aeroforces}
 \end{figure}
-Two significant aerodynamic coefficients are used as the lift and drag forces coefficients shown in Equations \ref{eqn:lift} and \ref{eqn:drag}. These coefficients are the lift and drag forces when normalised by the dynamic pressure (q) and the wing area (S). 
+
 
 
 \begin{equation}
@@ -203,14 +207,7 @@ Two significant aerodynamic coefficients are used as the lift and drag forces co
      \label{eqn:drag}
 \end{equation}
 
-The lift coefficient can also be described in terms of the angle of attack, the lift coefficient at an angle of attack of 0 ($C_{L_0}$) and the slope of the lift curve with respect to the angle of attack ($C_{L_\alpha}$). 
-
-\begin{equation}
-    C_L \approx C_{L_0} + C_{L_\alpha}\alpha
-    \label{eqn:Cl}
-\end{equation}
-
-Figure \ref{fig:Clalpha} shows a visualisation of these parameters. 
+The lift coefficient is described in terms of the \acrshort{AoA}, the lift coefficient at an \acrshort{AoA} of 0 ($C_{L_0}$) and the slope of the lift curve with respect to the \acrshort{AoA} ($C_{L_\alpha}$) shown in Figure \ref{fig:Clalpha} which can be modelled by Equation \ref{eqn:Cl}
 
 \begin{figure}[H]
     \centering
@@ -219,7 +216,12 @@ Figure \ref{fig:Clalpha} shows a visualisation of these parameters.
     \label{fig:Clalpha}
 \end{figure}
 
-Equation \ref{eqn:Cl} is accurate at small angles of attack where the lift curve slope is linear as shown in Figure \ref{fig:Clalpha}. The lift curve slope at higher angles of attack becomes non-linear due to flow separation, and hence Equation \ref{eqn:Cl} is an inaccurate approximation. Drag can be estimated through Equation \ref{eqn:Cd}, where $C_{D_0}$ is the drag due to skin friction and e is the Oswald efficiency factor. The Oswald efficiency factor measures the lift distribution efficiency across a wing. 
+\begin{equation}
+    C_L \approx C_{L_0} + C_{L_\alpha}\alpha
+    \label{eqn:Cl}
+\end{equation}
+
+Equation \ref{eqn:Cl} is accurate at small angles of attack where the lift curve slope is linear as shown in Figure \ref{fig:Clalpha}. The lift curve slope at higher angles of attack becomes non-linear due to flow separation, and hence Equation \ref{eqn:Cl} is an inaccurate approximation. Drag can be estimated through Equation \ref{eqn:Cd}, where $C_{D_0}$ is the drag due to skin friction and \acrshort{e} is the Oswald efficiency factor. The Oswald efficiency factor measures the lift distribution efficiency across a wing. 
 
 
 \begin{equation}
@@ -231,13 +233,14 @@ Equation \ref{eqn:Cl} is accurate at small angles of attack where the lift curve
 
 \section{Static Longitudinal Stability}
 
-Static longitudinal stability is determined from the pitching moment M. The pitching moment is defined as shown in Equation \ref{eqn:MACSimplified}.
+Static longitudinal stability is determined from the pitching moment $C_M$. The pitching moment is defined as shown in Equation \ref{eqn:yoyo}.
 
 \begin{equation}
     C_M = \frac{M}{\frac{1}{2}\rho {V_\infty}^2 S \overline{c}}
+    \label{eqn:yoyo}
 \end{equation}
 
-The derivative of the pitching moment with respect to the angle of attack must be negative with a positive angle of attack to be stable. This is also given in Equation \ref{eqn:pitching}.
+The derivative of the pitching moment with respect to the angle of attack must be negative with a positive \acrshort{AoA} to be stable. This is also given in Equation \ref{eqn:pitching}.
 
 \begin{equation}
     C_{M_\alpha} = \frac{\delta C_M}{\delta \alpha} < 0 
@@ -250,7 +253,7 @@ The aerodynamic centre of the aircraft is also referred to as the neutral point.
 % \hspace*{-1.3in}
   \centering
    \includegraphics[width=1\linewidth]{03_LiteratureReview/Figs/CGNPAC.JPG}
-  \caption{Position of center of gravity (CG), neutral point (NP) and aerodynamic center (AC)}
+  \caption{Position of center of gravity (\acrshort{CG}), neutral point (\acrshort{NP}) and aerodynamic center (\acrshort{AC})}
   \label{fig:AC}
 \end{figure}
 
@@ -298,7 +301,7 @@ Static lateral stability is determined by the roll moment \textit{l} and yaw mom
 
 \begin{equation}
     C_n = \frac{n}{\frac{1}{2} \rho {V_\infty}^2 S b }
-    \label{eqn:yaw}
+    \label{eqn:]yaw}
 \end{equation}
 
 The lateral stability of an aircraft is based on the change in $C_n$ and $C_l$ with respect to disturbances in the sideslip angle. A further parameter can be determined from the yaw moment by taking the derivative with respect to the sideslip angle. This is given in Equation \ref{eqn:sideslip}. This is also known as yaw stiffness.
@@ -332,12 +335,12 @@ However, it is possible to have an aircraft that meets these criteria but is sti
   \label{fig:sideslip}
 \end{figure}
 
-\todo{change capital letters defining moments to lower case}
+
 
 \begin{figure}[H]
 % \hspace*{-1.3in}
   \centering
-   \includegraphics[width=0.7\linewidth]{03_LiteratureReview/Figs/axes2.JPG}
+   \includegraphics[width=0.6\linewidth]{02_Background/Figs/thisyee.JPG}
   \caption{Moments acting on an aircraft}
   \label{fig:pitch}
 \end{figure}

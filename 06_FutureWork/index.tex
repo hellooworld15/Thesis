@@ -2,25 +2,30 @@
 
 \chapter{Conclusions and Future Work} 
 This chapter outlines the work completed in this thesis and summarises the main conclusions. Key areas identified for further investigation have also been identified with suggestions made on areas which could provide key insights into this area of study. 
+
+\acrshort{MAV}s ability to be much quieter and concealed gives them a significant advantage over \acrshort{UAV}s \cite{Chaturvedi2019} and has led to an increasing interest in improving and understanding the aerodynamics and stability of \acrshort{MAV} designs. \acrshort{MAV} designs are much more challenging to design and manufacture due to the low-speed flight, small physical dimensions and low inertia. The low-speed and non-linear flight dynamics are of particular importance for MAV development. While many recent studies have investigated the effects of using a propeller, none so far have analysed a propeller mounted on a MAV to investigate the effects the addition of a propeller has on the stability of \acrshort{MAV} designs. This thesis has covered the influence of an operating propeller mounted on three main \acrshort{MAV} configurations to assess changes in the stability of a developed \acrshort{MAV} model. The three configurations which have been investigated as the pusher, tractor and no propeller configurations. 
+
+
+
 \section{Conclusions}
 
-A 3D printed MAV model using light-weight PLA, and superlight-weight PLA was successfully designed in FreeCAD and tested in the 3x4 ft wind tunnel for stability coefficients and aerodynamic characteristics. These results were processed and validated against data produced by VAP 3.5 in order to assess the accuracy of the data produced and assess the suitability of using VAP 3.5 for analysing propeller-wing interactions.\\
+A 3D printed \acrshort{MAV} model using light-weight \acrshort{PLA} and superlight-weight \acrshort{PLA} was successfully designed in FreeCAD and tested in the 3x4 ft wind tunnel for stability coefficients and aerodynamic characteristics. These results were processed and validated against data produced by VAP 3.5 in order to assess the accuracy of the data produced and assess the suitability of using VAP 3.5 for analysing propeller-wing interactions.\\
 
 The key conclusions determined from this investigation are:
 
 \begin{itemize}
 
-    \item Increasing the airspeed and propeller speed delayed the MAV model's stall as the angle of attack increased in all configurations. The tractor configuration has a deeper stall when airspeed is at 20m$s^{-1}$, which is undesirable in order to be able to recover the MAV if a stall were to occur. 
+    \item Increasing the airspeed and propeller speed delayed the \acrshort{MAV} model's stall as the stall angle of attack increased in all configurations. The tractor configuration has a deeper stall when airspeed is at 20m$s^{-1}$, which is undesirable to recover the \acrshort{MAV} if a stall were to occur. 
 
-    \item  The highest drag coefficient occurred when no propeller operated on the MAV model. The tractor configuration, in general, produces less drag than the pusher configuration; hence, the drag coefficient is lower for the tractor configuration.  
+    \item  The highest force coefficient (thrust minus drag) occurred when no propeller operated on the \acrshort{MAV} model. The tractor configuration, in general, produces a lower magnitude force than the pusher configuration; hence, the force coefficient is lower for the tractor configuration. This is possibly due to a lower thrust being produced by the tractor configuration, however further investigation is needed. 
 
-    \item The pitching moment of the MAV model decreased as the angle of attack increased and indicated that the MAV was stable in all cases. 
+    \item The pitching moment of the \acrshort{MAV} model decreased as the angle of attack increased and indicated that the \acrshort{MAV} was stable in all cases. 
     
-    \item The pusher configuration had a larger pitching moment compared with the no-propeller model and showed that the MAV became more stable in the pusher configuration. The opposite trend was seen with the tractor configuration; hence, the tractor configuration became less stable than the no-propeller MAV model.
+    \item The pusher configuration had a larger pitching moment compared with the no-propeller model and showed that the \acrshort{MAV} became more stable in the pusher configuration. The opposite trend was seen with the tractor configuration; hence, the tractor configuration became less stable than the no-propeller \acrshort{MAV} model.
 
-    \item The pusher configuration shifts the rolling moment to a larger extent due to having a larger moment arm from the position of the propeller to the aerodynamic centre of the MAV model than the tractor configuration. In this case, the pusher configuration would require more input from control surfaces such as ailerons to correct this and maintain stability.
+    \item The pusher configuration shifts the rolling moment to a larger extent due to having a larger moment arm from the position of the propeller to the aerodynamic centre of the \acrshort{MAV} model than the tractor configuration. In this case, the pusher configuration would require more input from control surfaces such as ailerons to correct this and maintain stability.
 
-    \item  The yawing coefficient for the tractor configuration was shifted upwards compared to both the pusher and no propeller configurations. This was caused by the roll moment, which created an adverse yaw effect where the MAV naturally tends to yaw in the opposite direction of the roll. In this case, the tractor configuration would require a larger control surface than the no propeller and pusher configuration to maintain stability. 
+    \item  The yawing coefficient for the tractor configuration was shifted upwards, increasing the yawing coefficient when compared to both the pusher and no propeller configurations. This was caused by the roll moment, which created an adverse yaw effect where the \acrshort{MAV} naturally tends to yaw in the opposite direction of the roll. In this case, the tractor configuration would require a larger control surface than the no propeller and pusher configuration to maintain stability. 
     
     \item Further investigation is required into the suitability of VAP 3.5 as a validation software for wing propeller interactions. Currently, the side forces and moment calculations are still in testing and, based on discrepancies found with wind tunnel testing, indicate that further work needs to be done regarding the side forces and moments generated by the propeller to determine the roll and yaw moment coefficients accurately. 
     
@@ -32,15 +37,15 @@ The key conclusions determined from this investigation are:
 The conclusions made in this thesis lead to many further investigations, which would greatly improve our understanding of \acrshort{MAV} stability and propeller-wing interactions in low airspeed conditions. These include:
 
 \begin{itemize}
-    \item An analysis into the effects of other parameters that define wing shapes such as sweep, dihedral and twist in both the \acrshort{MAV} tractor and pusher configurations. Currently, only one wing shape has been analysed, and the influence of the wing shape on the stability of the MAV would enable a greater understanding of the effects that wing parameters have on both the tractor and pusher configurations. 
+    \item An analysis into the effects of other parameters that define wing shapes such as sweep, dihedral and twist in both the \acrshort{MAV} tractor and pusher configurations. Currently, only one wing shape has been analysed, and the influence of the wing shape on the stability of the \acrshort{MAV} would enable a greater understanding of the effects that wing parameters have on both the tractor and pusher configurations. 
 
-    \item Looking into the effects of propeller size could provide further insight into the influence of the wing-propeller interaction on the stability of the MAV in more detail. 
+    \item Looking into the effects of propeller size could provide further insight into the influence of the wing-propeller interaction on the stability of the \acrshort{MAV} in more detail. 
 
    % \item Investigating the flow distribution across the surface of the wing or using a visualisation technique to further understand the wake interactions occurring between the main MAV body, wing and propeller in both configurations 
 
     \item Further wind tunnel testing to investigate the yaw stiffness and dihedral effect would provide a complete understanding of the stability and the kind of control surfaces required for each configuration.
 
-    \item Further refinement of the VAP model geometry to better account for fuselage, tail and wing shapes would allow for more accurate stability coefficient calculation.
+    \item Further refinement of the VAP 3.5 model geometry to better account for fuselage, tail and wing shapes would allow for more accurate stability coefficient calculation.
     
     \item An analysis of the suitability of VAP 3.5 as a validation software for wing propeller interactions would allow for a greater understanding of why the discrepancies seen are so significant. This could also be used to improve how the side forces and moments that are generated by the propeller are translated onto the main model to be tested and, as a consequence, the accuracy of the stability coefficients for yaw, roll and pitch.
 
